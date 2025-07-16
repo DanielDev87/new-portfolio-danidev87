@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Daniel Agudelo 🇨🇴</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: iPortfolio
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+  <style>
+    .stats-desc {
+      display: block;
+      font-size: 1.1rem;
+      color: var(--heading-color);
+      font-weight: 600;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 30px;
+      right: 30px;
+      background-color: #25d366;
+      color: #fff;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 2.5rem;
+      box-shadow: 2px 2px 3px #999;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s;
+    }
+    .whatsapp-float:hover {
+      background: #20ba5a;
+      color: #fff;
+      text-decoration: none;
+    }
+    .social-links-lg a {
+      font-size: 2.5rem !important;
+      margin: 0 18px !important;
+    }
+    .social-links-lg a i {
+      font-size: 2.5rem !important;
+    }
+  </style>
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="assets/img/my-profile-img.jpeg" alt="" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+      <h1 class="sitename">Daniel Agudelo</h1>
+    </a>
+
+    <div class="social-links text-center">
+      <a href="https://github.com/DanielDev87" class="github" target="_blank"><i class="bi bi-github"></i></a>
+      <a href="https://www.linkedin.com/in/daniel-felipe-agudelo-molina-42049b162/" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+      <a href="https://www.youtube.com/channel/UCG470Y3lnaZqNWGlYRwm0nw" class="youtube" target="_blank"><i class="bi bi-youtube"></i></a>
+      <a href="https://gitlab.com/danielagudelo87" class="gitlab" target="_blank"><i class="bi bi-git"></i></a>
+      <a href="mailto:felipeagudelo2010@hotmail.com" class="email"><i class="bi bi-envelope"></i></a>
+    </div>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+        <li class="nav-item-language">
+          <button id="btn-es" class="btn-lang active">🇨🇴 ES</button>
+          <button id="btn-en" class="btn-lang">🇨🇦 EN</button>
+        </li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="assets/img/hero-bg.jpeg" alt="" data-aos="fade-in" class="">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2>Daniel Agudelo</h2>
+        <p><span id="hero-iam"></span> <span class="typed" data-typed-items="Ingeniero de Software,Desarrollador,Consultor"></span></p>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
+        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-4">
+            <img src="assets/img/meavatar1.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 content">
+            <h2 id="about-role"></h2>
+            <p class="fst-italic py-3" id="about-intro"></p>
+            <p class="py-3">
+              <!-- Párrafo eliminado, solo queda la información profesional relevante -->
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6 col-md-6">
+            <div class="stats-item">
+              <i class="bi bi-award"></i>
+              <span>14+</span>
+              <p><strong id="stats-experience"></strong></p>
+              <span id="stats-experience-desc" class="stats-desc"></span>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-6 col-md-6">
+            <div class="stats-item">
+              <i class="bi bi-briefcase"></i>
+              <span>100+</span>
+              <p><strong id="stats-projects"></strong></p>
+              <span id="stats-projects-desc" class="stats-desc"></span>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Stats Section -->
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Skills</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row skills-content skills-animation">
+
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="progress"><span class="skill"><span>HTML</span> <i class="val">100%</i></span><div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div></div></div>
+                <div class="progress"><span class="skill"><span>CSS</span> <i class="val">98%</i></span><div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div></div></div>
+                <div class="progress"><span class="skill"><span>JavaScript</span> <i class="val">98%</i></span><div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div></div></div>
+                <div class="progress"><span class="skill"><span>TypeScript</span> <i class="val">95%</i></span><div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div></div></div>
+                <div class="progress"><span class="skill"><span>Java</span> <i class="val">95%</i></span><div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div></div></div>
+              </div>
+              <div class="col-md-4">
+                <div class="progress"><span class="skill"><span>PHP</span> <i class="val">95%</i></span><div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div></div></div>
+                <div class="progress"><span class="skill"><span>Python</span> <i class="val">95%</i></span><div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div></div></div>
+                <div class="progress"><span class="skill"><span>Node.js</span> <i class="val">95%</i></span><div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div></div></div>
+                <div class="progress"><span class="skill"><span>Express</span> <i class="val">92%</i></span><div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div></div></div>
+                <div class="progress"><span class="skill"><span>Flask</span> <i class="val">92%</i></span><div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div></div></div>
+              </div>
+              <div class="col-md-4">
+                <div class="progress"><span class="skill"><span>Spring Boot</span> <i class="val">92%</i></span><div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div></div></div>
+                <div class="progress"><span class="skill"><span>React.js</span> <i class="val">95%</i></span><div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div></div></div>
+                <div class="progress"><span class="skill"><span>React Native</span> <i class="val">92%</i></span><div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div></div></div>
+                <div class="progress"><span class="skill"><span>Expo</span> <i class="val">92%</i></span><div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div></div></div>
+                <div class="progress"><span class="skill"><span>SQL / NoSQL</span> <i class="val">95%</i></span><div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div></div></div>
+                <div class="progress"><span class="skill"><span>DevOps / Azure</span> <i class="val">90%</i></span><div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div></div></div>
+                <div class="progress"><span class="skill"><span>Scrum</span> <i class="val">90%</i></span><div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div></div></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Skills Section -->
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Resume</h2>
+        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title" id="resume-summary-title"></h3>
+            <div class="resume-item pb-0">
+              <h4>Daniel Agudelo</h4>
+              <p id="resume-summary-desc"></p>
+            </div><!-- End Resume Item -->
+            <h3 class="resume-title" id="resume-education-title"></h3>
+            <div class="resume-item">
+              <h4 id="resume-edu1-degree"></h4>
+              <p><em id="resume-edu1"></em></p>
+            </div>
+            <div class="resume-item">
+              <h4 id="resume-edu2-degree"></h4>
+              <p><em id="resume-edu2"></em></p>
+            </div>
+            <div class="resume-item">
+              <h4 id="resume-edu3-degree"></h4>
+              <p><em id="resume-edu3"></em></p>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="resume-title" id="resume-experience-title"></h3>
+            <div id="resume-experience-list"></div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Resume Section -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Portfolio</h2>
+        <p id="portfolio-desc">Explora una selección de mis proyectos y colaboraciones más destacados en desarrollo de software, aplicaciones web, móviles y soluciones tecnológicas a medida. Cada trabajo refleja mi compromiso con la calidad, la innovación y la satisfacción de mis clientes. ¡Descubre cómo puedo aportar valor a tu empresa o idea!</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active" id="portfolio-cat-all">TODO</li>
+            <li data-filter=".filter-app-movil" id="portfolio-cat-app-movil">APP MOVIL</li>
+            <li data-filter=".filter-app-web" id="portfolio-cat-app-web">APP WEB</li>
+            <li data-filter=".filter-websites" id="portfolio-cat-websites">WEBSITES</li>
+            <li data-filter=".filter-backend" id="portfolio-cat-backend">BACKEND</li>
+          </ul><!-- End Portfolio Filters -->
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <!-- Las cards se renderizan dinámicamente por JS -->
+
+          </div><!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Services</h2>
+        <p id="services-intro">Conoce lo que puedo hacer por ti y algunos de mis proyectos y colaboraciones.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+        <div class="row gy-4" id="services-list">
+          <!-- Los servicios se renderizan dinámicamente por JS -->
+        </div>
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p id="contact-desc">¿Quieres que trabajemos juntos, tienes una consulta o deseas conocer más sobre mis servicios y experiencia? No dudes en contactarme a través de cualquiera de mis redes sociales. ¡Estoy disponible para nuevos proyectos, colaboraciones y asesorías!</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-8">
+            <div class="social-links text-center mt-4 social-links-lg">
+              <a href="https://github.com/DanielDev87" class="github" target="_blank"><i class="bi bi-github"></i></a>
+              <a href="https://www.linkedin.com/in/daniel-felipe-agudelo-molina-42049b162/" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+              <a href="https://www.youtube.com/channel/UCG470Y3lnaZqNWGlYRwm0nw" class="youtube" target="_blank"><i class="bi bi-youtube"></i></a>
+              <a href="https://gitlab.com/danielagudelo87" class="gitlab" target="_blank"><i class="bi bi-git"></i></a>
+              <a href="mailto:felipeagudelo2010@hotmail.com" class="email"><i class="bi bi-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Contact Section -->
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/573225917022" class="whatsapp-float" target="_blank" title="WhatsApp">
+      <i class="bi bi-whatsapp"></i>
+    </a>
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>&copy; Copyright <span id="currentYear"></span>, <a class="white" href="https://github.com/DanielDev87">Daniel Agudelo with ❤</a> <br>All Rights Reserved</p>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    // Diccionario de traducciones
+    const translations = {
+      es: {
+        home: 'Inicio',
+        about: 'Sobre mí',
+        resume: 'Currículum',
+        portfolio: 'Portafolio',
+        services: 'Servicios',
+        contact: 'Contacto',
+        heroTitle: 'Daniel Agudelo',
+        heroDesc: "<span id='hero-iam'></span> <span class='typed' data-typed-items='Ingeniero de Software,Desarrollador,Consultor'></span>",
+        aboutTitle: 'Sobre mí',
+        aboutDesc: 'Magister en Ingeniería e Ingeniero informático especializado en desarrollo de software, Actualmente me desempeño como Desarrollador freelance bajo mi marca DaniDev87.\nTambién he trabajado para varias empresas nacionales y multinacionales como Ingeniero de Software, Backend, Líder Técnico, Desarrollador Móvil, Desarrollo Web y gestión de contenidos educativos y plataformas LMS como Moodle, Elión y Canvas.\n\nRealmente disfruto tanto este mundo y valoro tanto el conocimiento que procuro transmitir mis saberes a quién lo desee, por eso también soy docente en educación superior.',
+        aboutRole: 'Ingeniero de Software & Consultor freelance',
+        aboutIntro: 'Apasionado por la tecnología y la innovación, me especializo en el desarrollo de soluciones de software a medida, consultoría tecnológica y liderazgo de proyectos. Mi experiencia abarca desde la ingeniería de software, backend, desarrollo móvil y web, hasta la gestión de plataformas educativas y la docencia universitaria.',
+        aboutBirthday: 'Cumpleaños:',
+        aboutWebsite: 'Sitio web:',
+        aboutPhone: 'Teléfono:',
+        aboutCity: 'Ciudad:',
+        aboutAge: 'Edad:',
+        aboutDegree: 'Título:',
+        aboutEmail: 'Correo:',
+        aboutFreelance: 'Freelance:',
+        aboutAvailable: 'Disponible',
+        aboutNotAvailable: 'No disponible',
+        aboutText1: 'Mi enfoque profesional está orientado a la excelencia, la mejora continua y la entrega de valor real a mis clientes y estudiantes. Me motiva el aprendizaje constante y la colaboración en equipos multidisciplinarios para lograr soluciones innovadoras y sostenibles.',
+        statsExperience: 'Años de experiencia',
+        statsExperienceDesc: 'Años de experiencia',
+        statsProjects: 'Proyectos y colaboraciones',
+        statsProjectsDesc: 'Proyectos y colaboraciones',
+        statsSupport: 'Horas de soporte',
+        statsWorkers: 'Colaboradores',
+        skillsTitle: 'Habilidades',
+        skillsDesc: 'Cuento con una sólida formación y experiencia en tecnologías de desarrollo web, móvil y backend, así como en metodologías ágiles, cloud y buenas prácticas de ingeniería de software. Mi enfoque es entregar soluciones robustas, escalables y alineadas a los objetivos del negocio.',
+        resumeTitle: 'Currículum',
+        resumeDesc: 'Profesional apasionado por la ingeniería de software, la consultoría tecnológica y la docencia universitaria. Mi trayectoria se ha enfocado en liderar proyectos innovadores, formar talento en el sector TI y aportar soluciones que generan valor real a empresas y estudiantes.',
+        resumeSumary: 'Resumen',
+        resumeEducation: 'Educación',
+        resumeExperience: 'Experiencia profesional',
+        resumeEdu1: "Politécnico Colombiano 'Jaime Isaza Cadavid'",
+        resumeEdu1Degree: 'Magister, Ingeniería de software',
+        resumeEdu2: 'Universidad Industrial de Santander',
+        resumeEdu2Degree: 'Full Stack Developer, Ciencias de la Computación y Soporte',
+        resumeEdu3: 'Católica del Norte Fundación Universitaria',
+        resumeEdu3Degree: 'Ingeniería, Ingeniería informática',
+        resumeSenior: 'Especialista senior en diseño gráfico',
+        resumeSpecialist: 'Especialista en diseño gráfico',
+        resumeDate1: '2015 - 2016',
+        resumeDate2: '2010 - 2014',
+        resumeDate3: '2019 - Presente',
+        resumeDate4: '2017 - 2018',
+        resumeLocation: 'Rochester Institute of Technology, Rochester, NY',
+        resumeLocation2: 'Experion, Nueva York, NY',
+        resumeLocation3: 'Stepping Stone Advertising, Nueva York, NY',
+        resumeSumaryName: 'Brandon Johnson',
+        resumeSumaryDesc: 'Diseñador gráfico innovador y orientado a plazos con más de 3 años de experiencia diseñando y desarrollando material de marketing digital/impreso centrado en el usuario desde el concepto inicial hasta el producto final.',
+        resumeSumaryList1: 'Portland par 127, Orlando, FL',
+        resumeSumaryList2: '(123) 456-7891',
+        resumeSumaryList3: 'alice.barkley@example.com',
+        resumeMasterDesc: 'Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend',
+        resumeBachelorDesc: 'Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila',
+        resumeSeniorDesc1: 'Liderar el diseño, desarrollo e implementación de la comunicación gráfica, diseño y producción.',
+        resumeSeniorDesc2: 'Delegar tareas a los 7 miembros del equipo de diseño y asesorar en todos los aspectos del proyecto.',
+        resumeSeniorDesc3: 'Supervisar la evaluación de todos los materiales gráficos para garantizar la calidad y precisión del diseño.',
+        resumeSeniorDesc4: 'Supervisar el uso eficiente de los presupuestos de proyectos de producción que van desde $2,000 hasta $25,000',
+        resumeSpecialistDesc1: 'Desarrolló numerosos programas de marketing (logotipos, folletos, infografías, presentaciones y anuncios).',
+        resumeSpecialistDesc2: 'Gestionó hasta 5 proyectos o tareas a la vez bajo presión.',
+        resumeSpecialistDesc3: 'Recomendó y asesoró a los clientes sobre el diseño gráfico más adecuado.',
+        resumeSpecialistDesc4: 'Creó más de 4 presentaciones y propuestas de diseño al mes para clientes y gerentes de cuentas.',
+        portfolioTitle: 'Portafolio',
+        portfolioDesc: 'Explora una selección de mis proyectos y colaboraciones más destacados en desarrollo de software, aplicaciones web, móviles y soluciones tecnológicas a medida. Cada trabajo refleja mi compromiso con la calidad, la innovación y la satisfacción de mis clientes. ¡Descubre cómo puedo aportar valor a tu empresa o idea!',
+        portfolioAll: 'TODO',
+        portfolioAppMovil: 'APP MOVIL',
+        portfolioAppWeb: 'APP WEB',
+        portfolioWebsites: 'WEBSITES',
+        portfolioBackend: 'BACKEND',
+        servicesTitle: 'Servicios',
+        servicesDesc: 'Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.',
+        service1: 'Lorem Ipsum',
+        service1Desc: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident',
+        service2: 'Dolor Sitema',
+        service2Desc: 'Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata',
+        service3: 'Sed ut perspiciatis',
+        service3Desc: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur',
+        service4: 'Magni Dolores',
+        service4Desc: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
+        service5: 'Nemo Enim',
+        service5Desc: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque',
+        service6: 'Eiusmod Tempor',
+        service6Desc: 'Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi',
+        testimonialsTitle: 'Testimonios',
+        testimonialsDesc: 'Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit',
+        testimonial1: 'Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.',
+        testimonial2: 'Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.',
+        testimonial3: 'Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.',
+        testimonial4: 'Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.',
+        testimonial5: 'Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.',
+        testimonialName1: 'Saul Goodman',
+        testimonialRole1: 'CEO & Fundador',
+        testimonialName2: 'Sara Wilsson',
+        testimonialRole2: 'Diseñadora',
+        testimonialName3: 'Jena Karlis',
+        testimonialRole3: 'Propietaria de tienda',
+        testimonialName4: 'Matt Brandon',
+        testimonialRole4: 'Freelancer',
+        testimonialName5: 'John Larson',
+        testimonialRole5: 'Emprendedor',
+        contactTitle: 'Contacto',
+        contactDesc: '¿Quieres que trabajemos juntos, tienes una consulta o deseas conocer más sobre mis servicios y experiencia? No dudes en contactarme a través de cualquiera de mis redes sociales. ¡Estoy disponible para nuevos proyectos, colaboraciones y asesorías!',
+        contactAddress: 'Dirección',
+        contactAddressVal: 'A108 Adam Street, Nueva York, NY 535022',
+        contactCall: 'Llámanos',
+        contactCallVal: '+1 5589 55488 55',
+        contactEmail: 'Envíanos un correo',
+        contactEmailVal: 'info@example.com',
+        contactFormName: 'Tu nombre',
+        contactFormEmail: 'Tu correo',
+        contactFormSubject: 'Asunto',
+        contactFormMessage: 'Mensaje',
+        contactFormLoading: 'Enviando...',
+        contactFormError: 'Hubo un error. Intenta de nuevo.',
+        contactFormSent: '¡Tu mensaje ha sido enviado. Gracias!',
+        contactFormSend: 'Enviar mensaje',
+        servicesIntro: 'Conoce lo que puedo hacer por ti y algunos de mis proyectos y colaboraciones.',
+        service1: 'Web sites y Landing Pages',
+        service1Desc: 'Tu propio sitio web o quizás una página de bienvenida a tu empresa o proyecto.',
+        service1Icon: 'bi-person-vcard',
+        service2: 'Aplicaciones web',
+        service2Desc: 'Desarrollo de aplicaciones web a la medida de tus necesidades y de tu empresa.',
+        service2Icon: 'bi-clock',
+        service3: 'Aplicaciones móviles',
+        service3Desc: 'Diseño y construcción de Apps híbridas a tu medida con las mejores tecnologías disponibles.',
+        service3Icon: 'bi-journal-text',
+        service4: 'Integraciones',
+        service4Desc: 'Integración de servicios, aplicaciones y proyectos, bajo estándares de seguridad y rendimiento.',
+        service4Icon: 'bi-calculator',
+        service5: 'Gestión de LMS',
+        service5Desc: 'Gestión de plataformas LMS, contenidos digitales y soporte.',
+        service5Icon: 'bi-easel',
+        service6: 'Tutorías y mentorías',
+        service6Desc: 'Puedo acompañarte en tus procesos de aprendizaje relacionados a las TIC, especialmente en el mundo del software.',
+        service6Icon: 'bi-calendar',
+        service7: 'Consultoría en diseño y desarrollo de software',
+        service7Desc: 'Asesoría experta en el diseño, arquitectura y desarrollo de soluciones de software a medida para tu empresa o proyecto.',
+        service7Icon: 'bi-lightbulb',
+      },
+      en: {
+        home: 'Home',
+        about: 'About',
+        resume: 'Resume',
+        portfolio: 'Portfolio',
+        services: 'Services',
+        contact: 'Contact',
+        heroTitle: 'Daniel Agudelo',
+        heroDesc: "<span id='hero-iam'></span> <span class='typed' data-typed-items='Software Engineer,Developer,Consultant'></span>",
+        aboutTitle: 'About',
+        aboutDesc: 'Master in Engineering and Computer Engineer specialized in software development. I currently work as a freelance developer under my brand DaniDev87.\nI have also worked for several national and multinational companies as a Software Engineer, Backend, Technical Lead, Mobile Developer, Web Developer, and in the management of educational content and LMS platforms such as Moodle, Elión, and Canvas.\n\nI truly enjoy this world and value knowledge so much that I strive to share what I know with anyone interested, which is why I am also a university professor.',
+        aboutRole: 'Software Engineer & Freelance Consultant',
+        aboutIntro: 'Passionate about technology and innovation, I specialize in custom software development, tech consulting, and project leadership. My experience covers software engineering, backend, mobile and web development, educational platform management, and university teaching.',
+        aboutBirthday: 'Birthday:',
+        aboutWebsite: 'Website:',
+        aboutPhone: 'Phone:',
+        aboutCity: 'City:',
+        aboutAge: 'Age:',
+        aboutDegree: 'Degree:',
+        aboutEmail: 'Email:',
+        aboutFreelance: 'Freelance:',
+        aboutAvailable: 'Available',
+        aboutNotAvailable: 'Not available',
+        aboutText1: 'My professional approach is focused on excellence, continuous improvement, and delivering real value to my clients and students. I am motivated by constant learning and collaboration in multidisciplinary teams to achieve innovative and sustainable solutions.',
+        statsExperience: 'Years of experience',
+        statsExperienceDesc: 'Years of experience',
+        statsProjects: 'Projects & collaborations',
+        statsProjectsDesc: 'Projects & collaborations',
+        statsSupport: 'Hours Of Support',
+        statsWorkers: 'Hard Workers',
+        skillsTitle: 'Skills',
+        skillsDesc: 'I have a strong background and experience in web, mobile, and backend development technologies, as well as agile methodologies, cloud, and software engineering best practices. My focus is on delivering robust, scalable solutions aligned with business goals.',
+        resumeTitle: 'Resume',
+        resumeDesc: 'Professional passionate about software engineering, technology consulting, and university teaching. My career has focused on leading innovative projects, training talent in the IT sector, and providing solutions that generate real value for companies and students.',
+        resumeSumary: 'Summary',
+        resumeEducation: 'Education',
+        resumeExperience: 'Professional Experience',
+        resumeEdu1: "Politécnico Colombiano 'Jaime Isaza Cadavid'",
+        resumeEdu1Degree: 'Master, Software Engineering',
+        resumeEdu2: 'Universidad Industrial de Santander',
+        resumeEdu2Degree: 'Full Stack Developer, Computer and Information Sciences and Support Services',
+        resumeEdu3: 'Católica del Norte Fundación Universitaria',
+        resumeEdu3Degree: 'Engineering, Computer Engineering',
+        resumeSenior: 'Senior graphic design specialist',
+        resumeSpecialist: 'Graphic design specialist',
+        resumeDate1: '2015 - 2016',
+        resumeDate2: '2010 - 2014',
+        resumeDate3: '2019 - Present',
+        resumeDate4: '2017 - 2018',
+        resumeLocation: 'Rochester Institute of Technology, Rochester, NY',
+        resumeLocation2: 'Experion, New York, NY',
+        resumeLocation3: 'Stepping Stone Advertising, New York, NY',
+        resumeSumaryName: 'Brandon Johnson',
+        resumeSumaryDesc: 'Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.',
+        resumeSumaryList1: 'Portland par 127, Orlando, FL',
+        resumeSumaryList2: '(123) 456-7891',
+        resumeSumaryList3: 'alice.barkley@example.com',
+        resumeMasterDesc: 'Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend',
+        resumeBachelorDesc: 'Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila',
+        resumeSeniorDesc1: 'Lead in the design, development, and implementation of the graphic, layout, and production communication materials',
+        resumeSeniorDesc2: 'Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project.',
+        resumeSeniorDesc3: 'Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design',
+        resumeSeniorDesc4: 'Oversee the efficient use of production project budgets ranging from $2,000 - $25,000',
+        resumeSpecialistDesc1: 'Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).',
+        resumeSpecialistDesc2: 'Managed up to 5 projects or tasks at a given time while under pressure',
+        resumeSpecialistDesc3: 'Recommended and consulted with clients on the most appropriate graphic design',
+        resumeSpecialistDesc4: 'Created 4+ design presentations and proposals a month for clients and account managers',
+        portfolioTitle: 'Portfolio',
+        portfolioDesc: 'Explore a selection of my most outstanding projects and collaborations in software development, web and mobile applications, and custom technology solutions. Each work reflects my commitment to quality, innovation, and client satisfaction. Discover how I can add value to your company or idea!',
+        portfolioAll: 'ALL',
+        portfolioAppMovil: 'MOBILE APP',
+        portfolioAppWeb: 'WEB APP',
+        portfolioWebsites: 'WEBSITES',
+        portfolioBackend: 'BACKEND',
+        servicesTitle: 'Services',
+        servicesDesc: 'Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.',
+        service1: 'Lorem Ipsum',
+        service1Desc: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident',
+        service2: 'Dolor Sitema',
+        service2Desc: 'Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata',
+        service3: 'Sed ut perspiciatis',
+        service3Desc: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur',
+        service4: 'Magni Dolores',
+        service4Desc: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
+        service5: 'Nemo Enim',
+        service5Desc: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque',
+        service6: 'Eiusmod Tempor',
+        service6Desc: 'Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi',
+        testimonialsTitle: 'Testimonials',
+        testimonialsDesc: 'Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit',
+        testimonial1: 'Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.',
+        testimonial2: 'Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.',
+        testimonial3: 'Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.',
+        testimonial4: 'Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.',
+        testimonial5: 'Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.',
+        testimonialName1: 'Saul Goodman',
+        testimonialRole1: 'Ceo & Founder',
+        testimonialName2: 'Sara Wilsson',
+        testimonialRole2: 'Designer',
+        testimonialName3: 'Jena Karlis',
+        testimonialRole3: 'Store Owner',
+        testimonialName4: 'Matt Brandon',
+        testimonialRole4: 'Freelancer',
+        testimonialName5: 'John Larson',
+        testimonialRole5: 'Entrepreneur',
+        contactTitle: 'Contact',
+        contactDesc: 'If you want to work together, have a question or want to know more about my services and experience, feel free to contact me through any of my social networks. I am available for new projects, collaborations and consulting!',
+        contactAddress: 'Address',
+        contactAddressVal: 'A108 Adam Street, New York, NY 535022',
+        contactCall: 'Call Us',
+        contactCallVal: '+1 5589 55488 55',
+        contactEmail: 'Email Us',
+        contactEmailVal: 'info@example.com',
+        contactFormName: 'Your Name',
+        contactFormEmail: 'Your Email',
+        contactFormSubject: 'Subject',
+        contactFormMessage: 'Message',
+        contactFormLoading: 'Loading',
+        contactFormError: 'There was an error. Please try again.',
+        contactFormSent: 'Your message has been sent. Thank you!',
+        contactFormSend: 'Send Message',
+        servicesIntro: 'Discover what I can do for you and some of my projects and collaborations.',
+        service1: 'Websites & Landing Pages',
+        service1Desc: 'Your own website or maybe a landing page for your company or project.',
+        service1Icon: 'bi-person-vcard',
+        service2: 'Web Applications',
+        service2Desc: 'Custom web application development tailored to your needs and your company.',
+        service2Icon: 'bi-clock',
+        service3: 'Mobile Applications',
+        service3Desc: 'Design and development of custom hybrid apps with the best available technologies.',
+        service3Icon: 'bi-journal-text',
+        service4: 'Integrations',
+        service4Desc: 'Integration of services, applications, and projects, following security and performance standards.',
+        service4Icon: 'bi-calculator',
+        service5: 'LMS Management',
+        service5Desc: 'Management of LMS platforms, digital content, and support.',
+        service5Icon: 'bi-easel',
+        service6: 'Tutoring & Mentoring',
+        service6Desc: 'I can support you in your learning processes related to ICT, especially in the world of software.',
+        service6Icon: 'bi-calendar',
+        service7: 'Software Design & Development Consulting',
+        service7Desc: 'Expert advice on the design, architecture, and development of custom software solutions for your company or project.',
+        service7Icon: 'bi-lightbulb',
+      }
+    };
+
+    //portfolio
+    const portfolioProjects = [
+      {
+        title: { es: "App Móvil de empleos", en: "Jobs Mobile App" },
+        desc: {
+          es: "Aplicación móvil para la búsqueda de empleos. Desarrollada en React Native, Expo, Node.js, Firebase, Cloudinary.",
+          en: "Mobile app for job search. Developed in React Native, Expo, Node.js, Firebase, Cloudinary."
+        },
+        img: "assets/img/portfolio/app-7.png",
+        category: "filter-app-movil",      
+        github: "https://github.com/DanielDev87/app-empleos",
+        demo: "https://www.youtube.com/watch?v=YqQm_gva_aI"
+      },
+      {
+        title: { es: "Gestor de Tareas Web", en: "Web Task Manager" },
+        desc: {
+          es: "Plataforma web para gestión de tareas tipo To Do List. Stack: Node.js, Express, MongoDB, React.",
+          en: "Web platform for task . Stack: Node.js, Express, MongoDB, React."
+        },
+        img: "assets/img/portfolio/app-1.png",
+        category: "filter-app-web",
+        github: "https://github.com/DanielDev87/todo-list",
+        demo: "https://stellular-frangollo-104038.netlify.app/"
+      },
+      {
+        title: { es: "App Bingo", en: "Bingo App" },
+        desc: {
+          es: "Aplicación web para gestión de un juego de bingo que contiene 2 vistas, una para el administrador y otra para el público. Stack: Node.js, HTML, CSS, JavaScript.",
+          en: "Web application for managing a bingo game that contains 2 views, one for the administrator and one for the public. Stack: Node.js, HTML, CSS, JavaScript."
+        },
+        img: "assets/img/portfolio/app-2.png",
+        category: "filter-app-web",
+        github: "https://github.com/DanielDev87/app-bingo",
+        demo: "https://jade-kringle-8d58db.netlify.app/",
+        demo1: "https://jade-kringle-8d58db.netlify.app/display.html"
+      },
+      {
+          title: { es: "Mario Bross 1", en: "Mario Bross 1" },
+            desc: {
+              es: "Juego Web Mario Bros nivel 1. Stack: HTML, CSS, JavaScript.",
+              en: "Web Mario Bros level 1. Stack: HTML, CSS, JavaScript."
+            },
+            img: "assets/img/portfolio/app-3.png",
+            category: "filter-app-web",
+            github: "https://github.com/DanielDev87/mario-bross-game",
+            demo: "https://playful-begonia-a5fe19.netlify.app//"
+      },
+      {
+          title: { es: "API Rest Gestión de Cursos", en: "API Rest Management of Courses" },
+            desc: {
+              es: "Esta es una aplicación web desarrollada con Spring Boot que permite gestionar la información de los cursos ofrecidos por CESDE.",
+              en: "This is a web application developed with Spring Boot that allows managing the information of the courses offered by CESDE."
+            },
+            img: "assets/img/portfolio/app-4.png",
+            category: "filter-backend",
+            github: "https://github.com/DanielDev87/gestor-cursos-cesde",
+            demo: "https://github.com/DanielDev87/gestor-cursos-cesde"
+      },
+
+      {
+        title: { es: "Landing Page ArtSmile", en: "ArtSmile Landing Page" },
+        desc: {
+          es: "Sitio web de presentación para clínica odontológica. HTML5, PHP, CSS3, Bootstrap.",
+          en: "Showcase website for a dental clinic. HTML5, PHP, CSS3, Bootstrap."
+        },
+        img: "assets/img/portfolio/app-5.png",
+        category: "filter-websites",
+        github: "https://github.com/DanielDev87/landing-artsmileav",
+        demo: "https://www.artsmileav.com/"
+      },
+      {
+        title: { es: "APP FOOD", en: "APP FOOD" },
+        desc: {
+          es: "Aplicación Web para la gestión de restaurantes y bares. Stack: Node.js, PHP, MySQL, Bootstrap.",
+          en: "Web application for managing restaurants and bars. Stack: Node.js, PHP, MySQL, Bootstrap."
+        },
+        img: "assets/img/portfolio/app-6.png",
+        category: "filter-app-web",
+        github: "https://github.com/DanielDev87/app-food",
+        demo: "https://www.artsmileav.com/oceanshots"
+      },
+      {
+        title: { es: "Sitio Web Portafolio", en: "Portfolio Website" },
+        desc: {
+          es: "Sitio web personal para mostrar proyectos y experiencia profesional. HTML, CSS, JS.",
+          en: "Personal website to showcase projects and professional experience. HTML, CSS, JS."
+        },
+        img: "assets/img/portfolio/branding-2.jpg",
+        category: "filter-websites",
+        github: "https://github.com/usuario/portafolio-web",
+        demo: "https://portafolioweb.com"
+      },
+      {
+        title: { es: "Backend para E-commerce", en: "E-commerce Backend" },
+        desc: {
+          es: "API para tienda online con autenticación y pagos. Node.js, MongoDB.",
+          en: "API for online store with authentication and payments. Node.js, MongoDB."
+        },
+        img: "assets/img/portfolio/product-3.jpg",
+        category: "filter-backend",
+        github: "https://github.com/usuario/backend-ecommerce",
+        demo: "https://ecommerceapi.com"
+      }
+    ];
+
+    function renderPortfolio(lang) {
+      const container = document.querySelector('.isotope-container');
+      container.innerHTML = '';
+      portfolioProjects.forEach(proj => {
+        container.innerHTML += `
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item ${proj.category}">
+            <div class="portfolio-content h-100">
+              <img src="${proj.img}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>${proj.title[lang]}</h4>
+                <p>${proj.desc[lang]}</p>
+                <div class="portfolio-buttons">
+                  <a href="${proj.github}" target="_blank" class="btn btn-sm btn-dark me-2"><i class="bi bi-github"></i> GitHub</a>
+                  <a href="${proj.demo}" target="_blank" class="btn btn-sm btn-primary"><i class="bi bi-box-arrow-up-right"></i> ${lang === 'es' ? 'Ver Proyecto' : 'View Project'}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+    }
+
+    // Función para cambiar idioma
+    function setLanguage(lang) {
+      document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      // Menú
+      document.querySelector('a[href="#hero"]').innerHTML = `<i class="bi bi-house navicon"></i>${translations[lang].home}`;
+      document.querySelector('a[href="#about"]').innerHTML = `<i class="bi bi-person navicon"></i> ${translations[lang].about}`;
+      document.querySelector('a[href="#resume"]').innerHTML = `<i class="bi bi-file-earmark-text navicon"></i> ${translations[lang].resume}`;
+      document.querySelector('a[href="#portfolio"]').innerHTML = `<i class="bi bi-images navicon"></i> ${translations[lang].portfolio}`;
+      document.querySelector('a[href="#services"]').innerHTML = `<i class="bi bi-hdd-stack navicon"></i> ${translations[lang].services}`;
+      document.querySelector('a[href="#contact"]').innerHTML = `<i class="bi bi-envelope navicon"></i> ${translations[lang].contact}`;
+      // Hero
+      document.querySelector('#hero .container h2').textContent = translations[lang].heroTitle;
+      document.querySelector('#hero .container p').innerHTML = translations[lang].heroDesc;
+      // Animación Typed.js
+      if (window.heroTypedInstance) {
+        window.heroTypedInstance.destroy();
+      }
+      const typedElement = document.querySelector('#hero .typed');
+      if (typedElement) {
+        window.heroTypedInstance = new Typed(typedElement, {
+          strings: typedElement.getAttribute('data-typed-items').split(','),
+          typeSpeed: 80,
+          backSpeed: 40,
+          backDelay: 1500,
+          loop: true
+        });
+      }
+      // Texto "Soy" o "I am"
+      document.getElementById('hero-iam').textContent = lang === 'es' ? 'Soy' : 'I am';
+      // About
+      document.querySelector('#about .section-title h2').textContent = translations[lang].aboutTitle;
+      document.querySelector('#about .section-title p').textContent = translations[lang].aboutDesc;
+      document.querySelector('#about .content h2').innerHTML = translations[lang].aboutRole;
+      document.querySelector('#about .content .fst-italic').textContent = translations[lang].aboutIntro;
+      // About datos personales
+      // const aboutLabels = document.querySelectorAll('#about .content strong');
+      // aboutLabels[0].textContent = translations[lang].aboutBirthday;
+      // aboutLabels[1].textContent = translations[lang].aboutWebsite;
+      // aboutLabels[2].textContent = translations[lang].aboutPhone;
+      // aboutLabels[3].textContent = translations[lang].aboutCity;
+      // aboutLabels[4].textContent = translations[lang].aboutAge;
+      // aboutLabels[5].textContent = translations[lang].aboutDegree;
+      // aboutLabels[6].textContent = translations[lang].aboutEmail;
+      // aboutLabels[7].textContent = translations[lang].aboutFreelance;
+      // About disponible
+      // document.querySelectorAll('#about .content ul li span').forEach((el) => {
+      //   if (el.textContent === 'Available' || el.textContent === 'Disponible') {
+      //     el.textContent = translations[lang].aboutAvailable;
+      //   }
+      // });
+      // About párrafo final
+      document.querySelectorAll('#about .content p.py-3').forEach((el) => {
+        el.textContent = translations[lang].aboutText1;
+      });
+      // Stats
+      document.getElementById('stats-experience').textContent = translations[lang].statsExperience;
+      document.getElementById('stats-experience-desc').textContent = translations[lang].statsExperienceDesc;
+      document.getElementById('stats-projects').textContent = translations[lang].statsProjects;
+      document.getElementById('stats-projects-desc').textContent = translations[lang].statsProjectsDesc;
+      // Skills
+      document.querySelector('#skills .section-title h2').textContent = translations[lang].skillsTitle;
+      document.querySelector('#skills .section-title p').textContent = translations[lang].skillsDesc;
+      // Resume
+      document.querySelector('#resume .section-title h2').textContent = translations[lang].resumeTitle;
+      document.querySelector('#resume .section-title p').textContent = translations[lang].resumeDesc;
+      document.getElementById('resume-summary-title').textContent = translations[lang].resumeSumary;
+      document.getElementById('resume-summary-desc').textContent = translations[lang].resumeSumaryDesc;
+      document.getElementById('resume-education-title').textContent = translations[lang].resumeEducation;
+      document.getElementById('resume-edu1-degree').textContent = translations[lang].resumeEdu1Degree;
+      document.getElementById('resume-edu1').textContent = translations[lang].resumeEdu1;
+      document.getElementById('resume-edu2-degree').textContent = translations[lang].resumeEdu2Degree;
+      document.getElementById('resume-edu2').textContent = translations[lang].resumeEdu2;
+      document.getElementById('resume-edu3-degree').textContent = translations[lang].resumeEdu3Degree;
+      document.getElementById('resume-edu3').textContent = translations[lang].resumeEdu3;
+      document.getElementById('resume-experience-title').textContent = translations[lang].resumeExperience;
+      // Experiencia profesional
+      const experience = {
+        es: [
+          {
+            company: 'Universidad Católica Luis Amigó',
+            role: 'Docente',
+            date: 'julio de 2025 - Presente',
+            location: 'Medellín, Antioquia, Colombia',
+            desc: 'Enseñanza de programación y desarrollo de software, focalizado en Desarrollo Móvil.'
+          },
+          {
+            company: 'DaniDev',
+            role: 'Consultor y Desarrollador Freelance',
+            date: 'enero de 2017 - Presente',
+            location: 'Colombia',
+            desc: 'Ingeniero de software freelance con experiencia en el análisis, diseño, desarrollo y despliegue de sistemas de información a medida, enfocados en resolver necesidades específicas de cada cliente. Implemento metodologías ágiles como Scrum y Kanban para gestionar proyectos de manera eficiente, asegurando entregas puntuales y de alta calidad. Trabajo con tecnologías modernas y herramientas innovadoras para crear soluciones escalables, seguras y de alto rendimiento.'
+          },
+          {
+            company: 'Tecnológico de Antioquia - Institución Universitaria',
+            role: 'Ingeniero de software en Unidad Virtual y Docente facultad de Ingeniería',
+            date: 'febrero de 2021 - Presente',
+            location: 'Colombia',
+            desc: 'Apoyo a la unidad de virtualidad de la facultad de ingeniería, contribuyendo al desarrollo y mantenimiento de plataformas educativas virtuales. Creación y diseño de cursos en línea, desarrollando contenidos interactivos y de alta calidad para optimizar la experiencia de aprendizaje.'
+          },
+          {
+            company: 'Alkemy',
+            role: 'Java Tutor',
+            date: 'marzo de 2025 - julio de 2025',
+            location: 'Colombia',
+            desc: 'Acompañamiento en procesos formativos bajo el modelo de aula invertida, brindando retroalimentación continua y fomentando la profundización temática en áreas clave del desarrollo de software.'
+          },
+          {
+            company: 'COOMULSAP',
+            role: 'Profesor de programación de software',
+            date: 'febrero de 2024 - diciembre de 2024',
+            location: 'Medellín, Antioquia, Colombia',
+            desc: 'Responsable de la enseñanza de tecnología e informática a estudiantes de 8°, 9°, 10° y 11° grado. Coordinador y docente del programa de media técnica en desarrollo de Software, en convenio con el SENA y la Universidad La Sallista.'
+          },
+          {
+            company: 'Municipio de Sabaneta',
+            role: 'Docente Ingeniería de Software',
+            date: 'mayo de 2023 - enero de 2024',
+            location: 'Sabaneta, Antioquia, Colombia',
+            desc: 'Creación y diseño de los microcurrículos del programa técnico en desarrollo de software, asegurando la alineación con los estándares educativos y las necesidades del mercado laboral.'
+          },
+          {
+            company: 'Católica del Norte Fundación Universitaria',
+            role: 'Ingeniero Analista de Desarrollo web',
+            date: 'junio de 2021 - julio de 2023',
+            location: 'Santa Rosa de Osos, Antioquia, Colombia',
+            desc: 'Análisis de información para el desarrollo de aplicaciones web, asegurando la comprensión de los requisitos y necesidades de los usuarios. Desarrollo de aplicaciones web eficientes y escalables, utilizando las mejores prácticas de la industria y tecnologías modernas.'
+          },
+          {
+            company: 'Sánchez Computadores',
+            role: 'Analista de desarrollo de software',
+            date: 'junio de 2019 - agosto de 2021',
+            location: 'Sevilla, Valle del Cauca, Colombia',
+            desc: 'Recolectar y analizar información para definir requerimientos en proyectos de sistemas de información, asegurando una comprensión completa de las necesidades del cliente. Desarrollar aplicaciones completas desde la base de datos hasta la interfaz gráfica, utilizando metodologías efectivas de desarrollo y asegurando la calidad del código y la funcionalidad del producto.'
+          }
+        ],
+        en: [
+          {
+            company: 'Universidad Católica Luis Amigó',
+            role: 'Lecturer',
+            date: 'July 2025 - Present',
+            location: 'Medellín, Antioquia, Colombia',
+            desc: 'Teaching programming and software development, focused on Mobile Development.'
+          },
+          {
+            company: 'DaniDev',
+            role: 'Consultant and Freelance Software Developer',
+            date: 'January 2017 - Present',
+            location: 'Colombia',
+            desc: 'Freelance software engineer experienced in the analysis, design, development, and deployment of custom information systems tailored to meet specific client needs. I implement agile methodologies such as Scrum and Kanban to efficiently manage projects, ensuring timely and high-quality deliveries. I work with modern technologies and innovative tools to create scalable, secure, and high-performance solutions.'
+          },
+          {
+            company: 'Tecnológico de Antioquia - Institución Universitaria',
+            role: 'Software Engineer in Virtual Unit and Lecturer, Faculty of Engineering',
+            date: 'February 2021 - Present',
+            location: 'Colombia',
+            desc: 'Support for the virtual unit of the Faculty of Engineering, contributing to the development and maintenance of virtual educational platforms. Creation and design of online courses, developing interactive and high-quality content to optimize the learning experience.'
+          },
+          {
+            company: 'Alkemy',
+            role: 'Java Tutor',
+            date: 'March 2025 - July 2025',
+            location: 'Colombia',
+            desc: 'Support in training processes under the flipped classroom model, providing continuous feedback and encouraging in-depth learning in key areas of software development.'
+          },
+          {
+            company: 'COOMULSAP',
+            role: 'Software Programming Teacher',
+            date: 'February 2024 - December 2024',
+            location: 'Medellín, Antioquia, Colombia',
+            desc: 'Responsible for teaching technology and computer science to 8th to 11th grade students. Coordinator and teacher of the technical high school program in Software Development, in partnership with SENA and Universidad La Sallista.'
+          },
+          {
+            company: 'Municipio de Sabaneta',
+            role: 'Software Engineering Lecturer',
+            date: 'May 2023 - January 2024',
+            location: 'Sabaneta, Antioquia, Colombia',
+            desc: 'Creation and design of micro-curricula for the technical program in software development, ensuring alignment with educational standards and labor market needs.'
+          },
+          {
+            company: 'Católica del Norte Fundación Universitaria',
+            role: 'Web Development Analyst Engineer',
+            date: 'June 2021 - July 2023',
+            location: 'Santa Rosa de Osos, Antioquia, Colombia',
+            desc: 'Information analysis for web application development, ensuring understanding of user requirements and needs. Development of efficient and scalable web applications using industry best practices and modern technologies.'
+          },
+          {
+            company: 'Sánchez Computadores',
+            role: 'Software Development Analyst',
+            date: 'June 2019 - August 2021',
+            location: 'Sevilla, Valle del Cauca, Colombia',
+            desc: 'Collect and analyze information to define requirements in information systems projects, ensuring a complete understanding of client needs. Develop complete applications from the database to the user interface, using effective development methodologies and ensuring code quality and product functionality.'
+          }
+        ]
+      };
+      // Render experiencia profesional
+      const expList = document.getElementById('resume-experience-list');
+      expList.innerHTML = '';
+      experience[lang].forEach(exp => {
+        expList.innerHTML += `<div class="resume-item"><h4>${exp.role}</h4><h5>${exp.date}</h5><p><em>${exp.company}, ${exp.location}</em></p><p>${exp.desc}</p></div>`;
+      });
+      // Contact
+      document.querySelector('#contact .section-title h2').textContent = translations[lang].contactTitle;
+      document.querySelector('#contact-desc').textContent = translations[lang].contactDesc;
+      // Las siguientes líneas se comentan porque los elementos ya no existen
+      // document.querySelector('#contact .info-item h3').textContent = translations[lang].contactAddress;
+      // document.querySelector('#contact .info-item p').textContent = translations[lang].contactAddressVal;
+      // document.querySelectorAll('#contact .info-item h3')[1].textContent = translations[lang].contactCall;
+      // document.querySelectorAll('#contact .info-item p')[1].textContent = translations[lang].contactCallVal;
+      // document.querySelectorAll('#contact .info-item h3')[2].textContent = translations[lang].contactEmail;
+      // document.querySelectorAll('#contact .info-item p')[2].textContent = translations[lang].contactEmailVal;
+      // Servicios
+      document.querySelector('#services .section-title h2').textContent = translations[lang].servicesTitle;
+      document.querySelector('#services-intro').textContent = translations[lang].servicesIntro;
+      // Renderizar servicios
+      const services = [
+        { key: 'service1' },
+        { key: 'service2' },
+        { key: 'service3' },
+        { key: 'service4' },
+        { key: 'service5' },
+        { key: 'service6' },
+        { key: 'service7' }
+      ];
+      const servicesList = document.getElementById('services-list');
+      servicesList.innerHTML = '';
+      services.forEach((srv, idx) => {
+        servicesList.innerHTML += `
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="${100 + idx * 100}">
+            <div class="icon flex-shrink-0"><i class="bi ${translations[lang][srv.key + 'Icon']}"></i></div>
+            <div>
+              <h4 class="title">${translations[lang][srv.key]}</h4>
+              <p class="description">${translations[lang][srv.key + 'Desc']}</p>
+            </div>
+          </div>
+        `;
+      });
+      // Portfolio
+      document.querySelector('#portfolio .section-title h2').textContent = translations[lang].portfolioTitle;
+      document.querySelector('#portfolio-desc').textContent = translations[lang].portfolioDesc;
+      document.getElementById('portfolio-cat-all').textContent = translations[lang].portfolioAll;
+      document.getElementById('portfolio-cat-app-movil').textContent = translations[lang].portfolioAppMovil;
+      document.getElementById('portfolio-cat-app-web').textContent = translations[lang].portfolioAppWeb;
+      document.getElementById('portfolio-cat-websites').textContent = translations[lang].portfolioWebsites;
+      document.getElementById('portfolio-cat-backend').textContent = translations[lang].portfolioBackend;
+      renderPortfolio(lang);
+    }
+    document.getElementById('btn-es').onclick = () => setLanguage('es');
+    document.getElementById('btn-en').onclick = () => setLanguage('en');
+
+    
+
+
+    // Idioma por defecto
+    setLanguage('es');
+
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
+
+  <script>
+    
+  </script>
+
+</body>
+
+</html>
