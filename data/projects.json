@@ -77,7 +77,7 @@
       "img": "assets/img/portfolio/app-5.png",
       "category": "websites",
       "github": "https://github.com/DanielDev87/landing-artsmileav",
-      "demo": "https://www.artsmileav.com/"
+      "demo": "https://www.draandreavargas.art/"
     },
     {
       "title": { "es": "App Food", "en": "App Food" },
@@ -90,6 +90,18 @@
       "category": "app-web",
       "github": "https://github.com/DanielDev87/app-food",
       "demo": "https://www.artsmileav.com/oceanshots"
+    },
+    {
+      "title": { "es": "Mesa de Soporte Técnico", "en": "IT Help Desk" },
+      "desc": {
+        "es": "Mesa de ayuda para la Universidad Católica Luis Amigó: registro de solicitudes, seguimiento por código, historial y respuestas en línea.",
+        "en": "Help desk for Universidad Católica Luis Amigó: request intake, tracking by code, history and online responses."
+      },
+      "stack": ["Laravel", "PHP", "MySQL", "Bootstrap"],
+      "img": "assets/img/portfolio/app-8.png",
+      "category": "app-web",
+      "github": "https://github.com/DanielDev87/virtual-center-app",
+      "demo": "https://soporte.ucatolicaluisamigo.edu.co/"
     },
     {
       "title": { "es": "Sitio Web Portafolio", "en": "Portfolio Website" },
