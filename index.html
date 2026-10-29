@@ -16,6 +16,7 @@
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
@@ -166,36 +167,12 @@
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="row skills-content skills-animation">
+        <div class="skills-marquee" aria-hidden="true">
+          <div class="skills-marquee-track" id="skills-marquee"></div>
+        </div><!-- End Skills Marquee -->
 
-          <div class="col-lg-12">
-            <div class="row">
-              <div class="col-md-4">
-                <div class="progress"><span class="skill"><span>HTML</span> <i class="val">100%</i></span><div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div></div></div>
-                <div class="progress"><span class="skill"><span>CSS</span> <i class="val">98%</i></span><div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div></div></div>
-                <div class="progress"><span class="skill"><span>JavaScript</span> <i class="val">98%</i></span><div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div></div></div>
-                <div class="progress"><span class="skill"><span>TypeScript</span> <i class="val">95%</i></span><div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div></div></div>
-                <div class="progress"><span class="skill"><span>Java</span> <i class="val">95%</i></span><div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div></div></div>
-              </div>
-              <div class="col-md-4">
-                <div class="progress"><span class="skill"><span>PHP</span> <i class="val">95%</i></span><div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div></div></div>
-                <div class="progress"><span class="skill"><span>Python</span> <i class="val">95%</i></span><div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div></div></div>
-                <div class="progress"><span class="skill"><span>Node.js</span> <i class="val">95%</i></span><div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div></div></div>
-                <div class="progress"><span class="skill"><span>Express</span> <i class="val">92%</i></span><div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div></div></div>
-                <div class="progress"><span class="skill"><span>Flask</span> <i class="val">92%</i></span><div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div></div></div>
-              </div>
-              <div class="col-md-4">
-                <div class="progress"><span class="skill"><span>Spring Boot</span> <i class="val">92%</i></span><div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div></div></div>
-                <div class="progress"><span class="skill"><span>React.js</span> <i class="val">95%</i></span><div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div></div></div>
-                <div class="progress"><span class="skill"><span>React Native</span> <i class="val">92%</i></span><div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div></div></div>
-                <div class="progress"><span class="skill"><span>Expo</span> <i class="val">92%</i></span><div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div></div></div>
-                <div class="progress"><span class="skill"><span>SQL / NoSQL</span> <i class="val">95%</i></span><div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div></div></div>
-                <div class="progress"><span class="skill"><span>DevOps / Azure</span> <i class="val">90%</i></span><div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div></div></div>
-                <div class="progress"><span class="skill"><span>Scrum</span> <i class="val">90%</i></span><div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div></div></div>
-              </div>
-            </div>
-          </div>
-
+        <div class="row gy-4" id="skills-groups">
+          <!-- Los grupos de habilidades se renderizan dinámicamente por JS -->
         </div>
 
       </div>
@@ -220,9 +197,25 @@
           </div>
         </div><!-- End Portfolio Filters -->
 
-        <div class="portfolio-grid" id="portfolio-grid">
-          <!-- Las cards se renderizan dinámicamente por JS -->
-        </div><!-- End Portfolio Container -->
+        <!-- Los proyectos se cargan desde data/projects.json -->
+        <div class="portfolio-stage" id="portfolio-stage">
+
+          <div class="portfolio-grid" id="portfolio-grid">
+            <div class="portfolio-loading"><span></span><span></span><span></span></div>
+          </div><!-- End Portfolio Grid -->
+
+          <div class="portfolio-carousel" id="portfolio-carousel" hidden>
+            <div class="swiper">
+              <div class="swiper-wrapper"></div>
+            </div>
+            <div class="portfolio-carousel-controls">
+              <button type="button" class="carousel-btn carousel-prev" aria-label="Anterior"><i class="bi bi-arrow-left"></i></button>
+              <div class="carousel-pagination"></div>
+              <button type="button" class="carousel-btn carousel-next" aria-label="Siguiente"><i class="bi bi-arrow-right"></i></button>
+            </div>
+          </div><!-- End Portfolio Carousel -->
+
+        </div>
 
       </div>
 
@@ -234,7 +227,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Services</h2>
-        <p id="services-intro">Conoce lo que puedo hacer por ti y algunos de mis proyectos y colaboraciones.</p>
+        <p id="services-intro"></p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -343,25 +336,7 @@
         skillsDesc: 'Cuento con una sólida formación y experiencia en tecnologías de desarrollo web, móvil y backend, así como en metodologías ágiles, cloud y buenas prácticas de ingeniería de software. Mi enfoque es entregar soluciones robustas, escalables y alineadas a los objetivos del negocio.',
         portfolioTitle: 'Portafolio',
         portfolioDesc: 'Explora una selección de mis proyectos y colaboraciones más destacados en desarrollo de software, aplicaciones web, móviles y soluciones tecnológicas a medida. Cada trabajo refleja mi compromiso con la calidad, la innovación y la satisfacción de mis clientes. ¡Descubre cómo puedo aportar valor a tu empresa o idea!',
-        portfolioAll: 'TODO',
-        portfolioAppMovil: 'APP MOVIL',
-        portfolioAppWeb: 'APP WEB',
-        portfolioWebsites: 'WEBSITES',
-        portfolioBackend: 'BACKEND',
         servicesTitle: 'Servicios',
-        servicesDesc: 'Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.',
-        service1: 'Lorem Ipsum',
-        service1Desc: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident',
-        service2: 'Dolor Sitema',
-        service2Desc: 'Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata',
-        service3: 'Sed ut perspiciatis',
-        service3Desc: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur',
-        service4: 'Magni Dolores',
-        service4Desc: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
-        service5: 'Nemo Enim',
-        service5Desc: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque',
-        service6: 'Eiusmod Tempor',
-        service6Desc: 'Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi',
         testimonialsTitle: 'Testimonios',
         testimonialsDesc: 'Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit',
         testimonial1: 'Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.',
@@ -395,28 +370,7 @@
         contactFormError: 'Hubo un error. Intenta de nuevo.',
         contactFormSent: '¡Tu mensaje ha sido enviado. Gracias!',
         contactFormSend: 'Enviar mensaje',
-        servicesIntro: 'Conoce lo que puedo hacer por ti y algunos de mis proyectos y colaboraciones.',
-        service1: 'Web sites y Landing Pages',
-        service1Desc: 'Tu propio sitio web o quizás una página de bienvenida a tu empresa o proyecto.',
-        service1Icon: 'bi-window-sidebar',
-        service2: 'Aplicaciones web',
-        service2Desc: 'Desarrollo de aplicaciones web a la medida de tus necesidades y de tu empresa.',
-        service2Icon: 'bi-code-slash',
-        service3: 'Aplicaciones móviles',
-        service3Desc: 'Diseño y construcción de Apps híbridas a tu medida con las mejores tecnologías disponibles.',
-        service3Icon: 'bi-phone',
-        service4: 'Integraciones',
-        service4Desc: 'Integración de servicios, aplicaciones y proyectos, bajo estándares de seguridad y rendimiento.',
-        service4Icon: 'bi-plug',
-        service5: 'Gestión de LMS',
-        service5Desc: 'Gestión de plataformas LMS, contenidos digitales y soporte.',
-        service5Icon: 'bi-mortarboard',
-        service6: 'Tutorías y mentorías',
-        service6Desc: 'Puedo acompañarte en tus procesos de aprendizaje relacionados a las TIC, especialmente en el mundo del software.',
-        service6Icon: 'bi-people',
-        service7: 'Consultoría en diseño y desarrollo de software',
-        service7Desc: 'Asesoría experta en el diseño, arquitectura y desarrollo de soluciones de software a medida para tu empresa o proyecto.',
-        service7Icon: 'bi-lightbulb',
+        servicesIntro: 'Soluciones de software de punta a punta: desde la idea y la arquitectura hasta el despliegue, el soporte y la evolución de tu producto.',
       },
       en: {
         home: 'Home',
@@ -451,25 +405,7 @@
         skillsDesc: 'I have a strong background and experience in web, mobile, and backend development technologies, as well as agile methodologies, cloud, and software engineering best practices. My focus is on delivering robust, scalable solutions aligned with business goals.',
         portfolioTitle: 'Portfolio',
         portfolioDesc: 'Explore a selection of my most outstanding projects and collaborations in software development, web and mobile applications, and custom technology solutions. Each work reflects my commitment to quality, innovation, and client satisfaction. Discover how I can add value to your company or idea!',
-        portfolioAll: 'ALL',
-        portfolioAppMovil: 'MOBILE APP',
-        portfolioAppWeb: 'WEB APP',
-        portfolioWebsites: 'WEBSITES',
-        portfolioBackend: 'BACKEND',
         servicesTitle: 'Services',
-        servicesDesc: 'Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.',
-        service1: 'Lorem Ipsum',
-        service1Desc: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident',
-        service2: 'Dolor Sitema',
-        service2Desc: 'Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata',
-        service3: 'Sed ut perspiciatis',
-        service3Desc: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur',
-        service4: 'Magni Dolores',
-        service4Desc: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
-        service5: 'Nemo Enim',
-        service5Desc: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque',
-        service6: 'Eiusmod Tempor',
-        service6Desc: 'Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi',
         testimonialsTitle: 'Testimonials',
         testimonialsDesc: 'Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit',
         testimonial1: 'Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.',
@@ -503,153 +439,266 @@
         contactFormError: 'There was an error. Please try again.',
         contactFormSent: 'Your message has been sent. Thank you!',
         contactFormSend: 'Send Message',
-        servicesIntro: 'Discover what I can do for you and some of my projects and collaborations.',
-        service1: 'Websites & Landing Pages',
-        service1Desc: 'Your own website or maybe a landing page for your company or project.',
-        service1Icon: 'bi-window-sidebar',
-        service2: 'Web Applications',
-        service2Desc: 'Custom web application development tailored to your needs and your company.',
-        service2Icon: 'bi-code-slash',
-        service3: 'Mobile Applications',
-        service3Desc: 'Design and development of custom hybrid apps with the best available technologies.',
-        service3Icon: 'bi-phone',
-        service4: 'Integrations',
-        service4Desc: 'Integration of services, applications, and projects, following security and performance standards.',
-        service4Icon: 'bi-plug',
-        service5: 'LMS Management',
-        service5Desc: 'Management of LMS platforms, digital content, and support.',
-        service5Icon: 'bi-mortarboard',
-        service6: 'Tutoring & Mentoring',
-        service6Desc: 'I can support you in your learning processes related to ICT, especially in the world of software.',
-        service6Icon: 'bi-people',
-        service7: 'Software Design & Development Consulting',
-        service7Desc: 'Expert advice on the design, architecture, and development of custom software solutions for your company or project.',
-        service7Icon: 'bi-lightbulb',
+        servicesIntro: 'End-to-end software solutions: from idea and architecture to deployment, support and the evolution of your product.',
       }
     };
 
-    //portfolio
-    const portfolioProjects = [
+    // Habilidades agrupadas por área (icon: clase de Devicon o de Bootstrap Icons)
+    const skillGroups = [
       {
-        title: { es: "App Móvil de empleos", en: "Jobs Mobile App" },
-        desc: {
-          es: "Aplicación móvil para la búsqueda de empleos, con publicación de vacantes y gestión de perfiles.",
-          en: "Mobile app for job search, with job postings and profile management."
-        },
-        stack: ["React Native", "Expo", "Node.js", "Firebase", "Cloudinary"],
-        img: "assets/img/portfolio/app-7.png",
-        category: "filter-app-movil",
-        github: "https://github.com/DanielDev87/app-empleos",
-        demo: "https://www.youtube.com/watch?v=YqQm_gva_aI"
+        title: { es: 'Frontend', en: 'Frontend' },
+        icon: 'bi-palette',
+        items: [
+          { name: 'HTML5', icon: 'devicon-html5-plain colored' },
+          { name: 'CSS3', icon: 'devicon-css3-plain colored' },
+          { name: 'JavaScript', icon: 'devicon-javascript-plain colored' },
+          { name: 'TypeScript', icon: 'devicon-typescript-plain colored' },
+          { name: 'React', icon: 'devicon-react-original colored' },
+          { name: 'Bootstrap', icon: 'devicon-bootstrap-plain colored' }
+        ]
       },
       {
-        title: { es: "Gestor de Tareas Web", en: "Web Task Manager" },
-        desc: {
-          es: "Plataforma web para la gestión de tareas tipo To Do List.",
-          en: "Web platform for To Do List style task management."
-        },
-        stack: ["React", "Node.js", "Express", "MongoDB"],
-        img: "assets/img/portfolio/app-1.png",
-        category: "filter-app-web",
-        github: "https://github.com/DanielDev87/todo-list",
-        demo: "https://stellular-frangollo-104038.netlify.app/"
+        title: { es: 'Backend', en: 'Backend' },
+        icon: 'bi-server',
+        items: [
+          { name: 'Node.js', icon: 'devicon-nodejs-plain colored' },
+          { name: 'Express', icon: 'devicon-express-original' },
+          { name: 'Java', icon: 'devicon-java-plain colored' },
+          { name: 'Spring Boot', icon: 'devicon-spring-plain colored' },
+          { name: 'PHP', icon: 'devicon-php-plain colored' },
+          { name: 'Laravel', icon: 'devicon-laravel-original colored' },
+          { name: 'Python', icon: 'devicon-python-plain colored' },
+          { name: 'Flask', icon: 'devicon-flask-original' }
+        ]
       },
       {
-        title: { es: "App Bingo", en: "Bingo App" },
-        desc: {
-          es: "Aplicación web para gestionar un juego de bingo con dos vistas: una para el administrador y otra para el público.",
-          en: "Web application for managing a bingo game with two views: one for the administrator and one for the public."
-        },
-        stack: ["Node.js", "HTML", "CSS", "JavaScript"],
-        img: "assets/img/portfolio/app-2.png",
-        category: "filter-app-web",
-        github: "https://github.com/DanielDev87/app-bingo",
-        demo: "https://jade-kringle-8d58db.netlify.app/",
-        demo1: "https://jade-kringle-8d58db.netlify.app/display.html"
+        title: { es: 'Desarrollo móvil', en: 'Mobile development' },
+        icon: 'bi-phone',
+        items: [
+          { name: 'Kotlin', icon: 'devicon-kotlin-plain colored' },
+          { name: 'Swift', icon: 'devicon-swift-plain colored' },
+          { name: 'Xcode', icon: 'devicon-xcode-plain colored' },
+          { name: 'Android', icon: 'devicon-android-plain colored' },
+          { name: 'Android Studio', icon: 'devicon-androidstudio-plain colored' },
+          { name: 'React Native', icon: 'devicon-react-original colored' },
+          { name: 'Expo', icon: 'bi bi-lightning-charge-fill' }
+        ]
       },
       {
-        title: { es: "Mario Bros 1", en: "Mario Bros 1" },
-        desc: {
-          es: "Recreación web del nivel 1 del clásico Mario Bros.",
-          en: "Web recreation of level 1 of the classic Mario Bros."
-        },
-        stack: ["HTML", "CSS", "JavaScript"],
-        img: "assets/img/portfolio/app-3.png",
-        category: "filter-app-web",
-        github: "https://github.com/DanielDev87/mario-bross-game",
-        demo: "https://playful-begonia-a5fe19.netlify.app/"
+        title: { es: 'Bases de datos', en: 'Databases' },
+        icon: 'bi-database',
+        items: [
+          { name: 'Oracle', icon: 'devicon-oracle-original colored' },
+          { name: 'PostgreSQL', icon: 'devicon-postgresql-plain colored' },
+          { name: 'MySQL', icon: 'devicon-mysql-original colored' },
+          { name: 'MongoDB', icon: 'devicon-mongodb-plain colored' },
+          { name: 'Firebase', icon: 'devicon-firebase-plain colored' }
+        ]
       },
       {
-        title: { es: "API Rest Gestión de Cursos", en: "Courses Management REST API" },
-        desc: {
-          es: "API para gestionar la información de los cursos ofrecidos por CESDE.",
-          en: "API for managing the information of the courses offered by CESDE."
-        },
-        stack: ["Java", "Spring Boot", "REST"],
-        img: "assets/img/portfolio/app-4.png",
-        category: "filter-backend",
-        github: "https://github.com/DanielDev87/gestor-cursos-cesde",
-        demo: "https://github.com/DanielDev87/gestor-cursos-cesde"
+        title: { es: 'DevOps y Cloud', en: 'DevOps & Cloud' },
+        icon: 'bi-cloud-check',
+        items: [
+          { name: 'Docker', icon: 'devicon-docker-plain colored' },
+          { name: 'Azure', icon: 'devicon-azure-plain colored' },
+          { name: 'Azure DevOps', icon: 'devicon-azuredevops-plain colored' },
+          { name: 'Git', icon: 'devicon-git-plain colored' },
+          { name: 'GitHub', icon: 'devicon-github-original' },
+          { name: 'GitLab', icon: 'devicon-gitlab-plain colored' },
+          { name: 'Linux', icon: 'devicon-linux-plain' }
+        ]
       },
       {
-        title: { es: "Landing Page ArtSmile", en: "ArtSmile Landing Page" },
-        desc: {
-          es: "Sitio web de presentación para una clínica odontológica.",
-          en: "Showcase website for a dental clinic."
-        },
-        stack: ["HTML5", "PHP", "CSS3", "Bootstrap"],
-        img: "assets/img/portfolio/app-5.png",
-        category: "filter-websites",
-        github: "https://github.com/DanielDev87/landing-artsmileav",
-        demo: "https://www.artsmileav.com/"
-      },
-      {
-        title: { es: "App Food", en: "App Food" },
-        desc: {
-          es: "Aplicación web para la gestión de restaurantes y bares.",
-          en: "Web application for managing restaurants and bars."
-        },
-        stack: ["Node.js", "PHP", "MySQL", "Bootstrap"],
-        img: "assets/img/portfolio/app-6.png",
-        category: "filter-app-web",
-        github: "https://github.com/DanielDev87/app-food",
-        demo: "https://www.artsmileav.com/oceanshots"
-      },
-      {
-        title: { es: "Sitio Web Portafolio", en: "Portfolio Website" },
-        desc: {
-          es: "Sitio web personal bilingüe para mostrar proyectos y experiencia profesional.",
-          en: "Bilingual personal website to showcase projects and professional experience."
-        },
-        stack: ["HTML", "CSS", "JavaScript"],
-        img: "assets/img/portfolio/branding-2.jpg",
-        category: "filter-websites",
-        github: "https://github.com/DanielDev87/new-portfolio-danidev87",
-        demo: "https://portafolioweb.com"
-      },
-      {
-        title: { es: "Backend para E-commerce", en: "E-commerce Backend" },
-        desc: {
-          es: "API para tienda online con autenticación y pagos.",
-          en: "API for an online store with authentication and payments."
-        },
-        stack: ["Node.js", "MongoDB"],
-        img: "assets/img/portfolio/product-3.jpg",
-        category: "filter-backend",
-        github: "https://github.com/usuario/backend-ecommerce",
-        demo: "https://ecommerceapi.com"
+        title: { es: 'Herramientas y metodologías', en: 'Tools & methodologies' },
+        icon: 'bi-tools',
+        items: [
+          { name: 'VS Code', icon: 'devicon-vscode-plain colored' },
+          { name: 'Moodle', icon: 'devicon-moodle-plain colored' },
+          { name: 'Scrum', icon: 'bi bi-arrow-repeat' },
+          { name: 'Kanban', icon: 'bi bi-kanban' }
+        ]
       }
     ];
 
-    const portfolioCategories = [
-      { filter: '*', key: 'portfolioAll', icon: 'bi-grid-3x3-gap' },
-      { filter: 'filter-app-movil', key: 'portfolioAppMovil', icon: 'bi-phone' },
-      { filter: 'filter-app-web', key: 'portfolioAppWeb', icon: 'bi-window-stack' },
-      { filter: 'filter-websites', key: 'portfolioWebsites', icon: 'bi-globe2' },
-      { filter: 'filter-backend', key: 'portfolioBackend', icon: 'bi-hdd-network' }
+    function renderSkills(lang) {
+      const groups = document.getElementById('skills-groups');
+      groups.innerHTML = skillGroups.map((group, idx) => `
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="${100 + (idx % 3) * 100}">
+          <div class="skill-group h-100">
+            <div class="skill-group-header">
+              <span class="skill-group-icon"><i class="bi ${group.icon}"></i></span>
+              <h3>${group.title[lang]}</h3>
+              <span class="skill-group-count">${group.items.length}</span>
+            </div>
+            <ul class="skill-chips">
+              ${group.items.map((item, i) => `<li style="--i:${i}"><i class="${item.icon}"></i>${item.name}</li>`).join('')}
+            </ul>
+          </div>
+        </div>
+      `).join('');
+
+      // Cinta infinita de logos (se duplica para que el bucle sea continuo)
+      const marquee = document.getElementById('skills-marquee');
+      if (!marquee.children.length) {
+        const logos = skillGroups.flatMap(g => g.items)
+          .map(item => `<span class="marquee-item"><i class="${item.icon}"></i>${item.name}</span>`).join('');
+        marquee.innerHTML = logos + logos;
+      }
+    }
+
+    // Servicios típicos de un desarrollador senior freelance
+    const servicesData = [
+      {
+        icon: 'bi-code-square',
+        title: { es: 'Desarrollo web a la medida', en: 'Custom web development' },
+        desc: {
+          es: 'Aplicaciones web, plataformas SaaS, e-commerce, sitios y landing pages rápidas, seguras y escalables.',
+          en: 'Web applications, SaaS platforms, e-commerce, websites and landing pages that are fast, secure and scalable.'
+        }
+      },
+      {
+        icon: 'bi-phone',
+        title: { es: 'Apps móviles iOS y Android', en: 'iOS & Android mobile apps' },
+        desc: {
+          es: 'Apps nativas (Kotlin, Swift) e híbridas (React Native, Expo), desde el prototipo hasta la publicación en las tiendas.',
+          en: 'Native (Kotlin, Swift) and hybrid (React Native, Expo) apps, from prototype to store release.'
+        }
+      },
+      {
+        icon: 'bi-diagram-3',
+        title: { es: 'Arquitectura de software', en: 'Software architecture' },
+        desc: {
+          es: 'Diseño de sistemas robustos: microservicios, arquitectura limpia, modelado de datos y decisiones técnicas que escalan.',
+          en: 'Robust system design: microservices, clean architecture, data modeling and technical decisions that scale.'
+        }
+      },
+      {
+        icon: 'bi-plug',
+        title: { es: 'APIs, backend e integraciones', en: 'APIs, backend & integrations' },
+        desc: {
+          es: 'APIs REST, integración con pasarelas de pago, ERPs, CRMs y servicios de terceros con altos estándares de seguridad.',
+          en: 'REST APIs, integration with payment gateways, ERPs, CRMs and third-party services with high security standards.'
+        }
+      },
+      {
+        icon: 'bi-cloud-arrow-up',
+        title: { es: 'Cloud y DevOps', en: 'Cloud & DevOps' },
+        desc: {
+          es: 'Contenedores con Docker, pipelines CI/CD, despliegues en Azure y automatización de infraestructura.',
+          en: 'Docker containers, CI/CD pipelines, Azure deployments and infrastructure automation.'
+        }
+      },
+      {
+        icon: 'bi-arrow-repeat',
+        title: { es: 'Modernización y soporte', en: 'Modernization & support' },
+        desc: {
+          es: 'Migración de sistemas legados, refactorización, mantenimiento evolutivo y soporte técnico continuo.',
+          en: 'Legacy system migration, refactoring, evolutive maintenance and ongoing technical support.'
+        }
+      },
+      {
+        icon: 'bi-shield-check',
+        title: { es: 'Auditoría de código y rendimiento', en: 'Code & performance audits' },
+        desc: {
+          es: 'Revisión de calidad, seguridad y rendimiento, con un plan de mejoras priorizado y accionable.',
+          en: 'Quality, security and performance reviews, with a prioritized and actionable improvement plan.'
+        }
+      },
+      {
+        icon: 'bi-person-workspace',
+        title: { es: 'Consultoría y liderazgo técnico', en: 'Consulting & tech leadership' },
+        desc: {
+          es: 'CTO fraccional, definición de roadmap técnico, liderazgo de equipos con Scrum y mentoría a desarrolladores.',
+          en: 'Fractional CTO, technical roadmap definition, team leadership with Scrum and developer mentoring.'
+        }
+      },
+      {
+        icon: 'bi-mortarboard',
+        title: { es: 'Plataformas LMS y e-learning', en: 'LMS & e-learning platforms' },
+        desc: {
+          es: 'Implementación, personalización y gestión de Moodle, Canvas y contenidos digitales interactivos.',
+          en: 'Implementation, customization and management of Moodle, Canvas and interactive digital content.'
+        }
+      }
     ];
+
+    function renderServices(lang) {
+      document.getElementById('services-list').innerHTML = servicesData.map((srv, idx) => `
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="${100 + (idx % 3) * 100}">
+          <div class="service-item d-flex h-100">
+            <div class="icon flex-shrink-0"><i class="bi ${srv.icon}"></i></div>
+            <div>
+              <h4 class="title">${srv.title[lang]}</h4>
+              <p class="description">${srv.desc[lang]}</p>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Portafolio: los proyectos y categorías se cargan desde data/projects.json
+    const PORTFOLIO_DATA_URL = 'data/projects.json';
+    let portfolioData = null;
+    let portfolioLang = 'es';
     let currentPortfolioFilter = '*';
+    let portfolioSwiper = null;
+    let portfolioRevealed = false;
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const portfolioLabels = {
+      es: { all: 'Todo', view: 'Ver proyecto', public: 'Vista pública', code: 'Código', error: 'No se pudieron cargar los proyectos.' },
+      en: { all: 'All', view: 'View project', public: 'Public view', code: 'Code', error: 'Projects could not be loaded.' }
+    };
+
+    function loadPortfolio() {
+      fetch(PORTFOLIO_DATA_URL, { cache: 'no-cache' })
+        .then(res => {
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          return res.json();
+        })
+        .then(data => {
+          portfolioData = data;
+          renderPortfolio(portfolioLang);
+        })
+        .catch(err => {
+          console.error('Error cargando el portafolio:', err);
+          document.getElementById('portfolio-grid').innerHTML =
+            `<p class="portfolio-error"><i class="bi bi-exclamation-circle"></i> ${portfolioLabels[portfolioLang].error}</p>`;
+        });
+    }
+
+    function getCategory(id) {
+      return portfolioData.categories.find(c => c.id === id) || { id, icon: 'bi-folder', label: { es: id, en: id } };
+    }
+
+    function projectCardHTML(proj, lang) {
+      const t = portfolioLabels[lang];
+      const cat = getCategory(proj.category);
+      const stack = proj.stack || [];
+      return `
+        <article class="portfolio-card" data-category="${proj.category}">
+          <div class="portfolio-media">
+            <img src="${proj.img}" alt="${proj.title[lang]}" loading="lazy" onerror="this.parentElement.classList.add('no-image'); this.remove();">
+            <i class="bi ${cat.icon} portfolio-placeholder" aria-hidden="true"></i>
+            <span class="portfolio-badge"><i class="bi ${cat.icon}"></i> ${cat.label[lang]}</span>
+            <div class="portfolio-overlay">
+              ${proj.demo ? `<a href="${proj.demo}" target="_blank" rel="noopener" title="${t.view}"><i class="bi bi-eye"></i></a>` : ''}
+              ${proj.github ? `<a href="${proj.github}" target="_blank" rel="noopener" title="GitHub"><i class="bi bi-github"></i></a>` : ''}
+            </div>
+          </div>
+          <div class="portfolio-body">
+            <h4>${proj.title[lang]}</h4>
+            <p>${proj.desc[lang]}</p>
+            <ul class="portfolio-stack">${stack.map(s => `<li>${s}</li>`).join('')}</ul>
+            <div class="portfolio-actions">
+              ${proj.demo ? `<a href="${proj.demo}" target="_blank" rel="noopener" class="btn-project">${t.view} <i class="bi bi-arrow-up-right"></i></a>` : ''}
+              ${proj.demo2 ? `<a href="${proj.demo2}" target="_blank" rel="noopener" class="btn-ghost"><i class="bi bi-display"></i> ${t.public}</a>` : ''}
+              ${proj.github ? `<a href="${proj.github}" target="_blank" rel="noopener" class="btn-ghost"><i class="bi bi-github"></i> ${t.code}</a>` : ''}
+            </div>
+          </div>
+        </article>
+      `;
+    }
 
     // Mueve la "píldora" del filtro activo bajo la categoría seleccionada
     function moveFilterIndicator() {
@@ -660,14 +709,73 @@
       indicator.style.transform = `translateX(${active.offsetLeft}px)`;
     }
 
-    // Revela las cards visibles con un retardo escalonado
+    // Revela las cards con un retardo escalonado
     function revealPortfolioCards(cards) {
+      if (!portfolioRevealed) return;
       cards.forEach((card, i) => {
         card.style.setProperty('--delay', `${i * 80}ms`);
         card.classList.remove('is-visible');
       });
-      void document.getElementById('portfolio-grid').offsetWidth;
+      void document.getElementById('portfolio-stage').offsetWidth;
       cards.forEach(card => card.classList.add('is-visible'));
+    }
+
+    // Efecto de luz que sigue al cursor sobre cada card
+    function trackCardSpotlight(e) {
+      const card = e.currentTarget;
+      const rect = card.getBoundingClientRect();
+      card.style.setProperty('--mx', `${e.clientX - rect.left}px`);
+      card.style.setProperty('--my', `${e.clientY - rect.top}px`);
+    }
+
+    // "Todo" se muestra en cuadrícula; una categoría concreta, en carrusel
+    function renderPortfolioView() {
+      const lang = portfolioLang;
+      const grid = document.getElementById('portfolio-grid');
+      const carousel = document.getElementById('portfolio-carousel');
+      const projects = currentPortfolioFilter === '*'
+        ? portfolioData.projects
+        : portfolioData.projects.filter(p => p.category === currentPortfolioFilter);
+
+      if (portfolioSwiper) {
+        portfolioSwiper.destroy(true, true);
+        portfolioSwiper = null;
+      }
+
+      let container;
+      if (currentPortfolioFilter === '*') {
+        carousel.hidden = true;
+        grid.hidden = false;
+        grid.innerHTML = projects.map(p => projectCardHTML(p, lang)).join('');
+        container = grid;
+      } else {
+        grid.hidden = true;
+        carousel.hidden = false;
+        carousel.querySelector('.swiper-wrapper').innerHTML =
+          projects.map(p => `<div class="swiper-slide">${projectCardHTML(p, lang)}</div>`).join('');
+        carousel.classList.toggle('is-single', projects.length < 2);
+        portfolioSwiper = new Swiper(carousel.querySelector('.swiper'), {
+          effect: 'coverflow',
+          centeredSlides: true,
+          slidesPerView: 'auto',
+          spaceBetween: 24,
+          grabCursor: true,
+          rewind: true,
+          speed: 700,
+          keyboard: { enabled: true },
+          coverflowEffect: { rotate: 0, stretch: 0, depth: 180, modifier: 1, scale: 0.9, slideShadows: false },
+          autoplay: projects.length > 1 && !reduceMotion
+            ? { delay: 4500, disableOnInteraction: false, pauseOnMouseEnter: true }
+            : false,
+          navigation: { prevEl: carousel.querySelector('.carousel-prev'), nextEl: carousel.querySelector('.carousel-next') },
+          pagination: { el: carousel.querySelector('.carousel-pagination'), clickable: true }
+        });
+        container = carousel;
+      }
+
+      const cards = [...container.querySelectorAll('.portfolio-card')];
+      cards.forEach(card => card.addEventListener('mousemove', trackCardSpotlight));
+      revealPortfolioCards(cards);
     }
 
     function filterPortfolio(filter) {
@@ -680,106 +788,60 @@
       });
       moveFilterIndicator();
 
-      const grid = document.getElementById('portfolio-grid');
-      const cards = [...grid.querySelectorAll('.portfolio-card')];
-      const matches = card => filter === '*' || card.dataset.category === filter;
-
-      cards.forEach(card => card.classList.add('is-leaving'));
+      const stage = document.getElementById('portfolio-stage');
+      stage.classList.add('is-leaving');
       setTimeout(() => {
-        cards.forEach(card => {
-          card.classList.remove('is-leaving');
-          card.hidden = !matches(card);
-        });
-        revealPortfolioCards(cards.filter(matches));
-      }, reduceMotion ? 0 : 280);
+        renderPortfolioView();
+        stage.classList.remove('is-leaving');
+      }, reduceMotion ? 0 : 300);
     }
 
-    // Efecto de luz que sigue al cursor sobre cada card
-    function trackCardSpotlight(e) {
-      const card = e.currentTarget;
-      const rect = card.getBoundingClientRect();
-      card.style.setProperty('--mx', `${e.clientX - rect.left}px`);
-      card.style.setProperty('--my', `${e.clientY - rect.top}px`);
-    }
-
-    let portfolioObserver;
     function renderPortfolio(lang) {
-      const t = translations[lang];
-      const labels = lang === 'es'
-        ? { view: 'Ver proyecto', public: 'Vista pública', code: 'Código' }
-        : { view: 'View project', public: 'Public view', code: 'Code' };
+      portfolioLang = lang;
+      if (!portfolioData) return;
+      const t = portfolioLabels[lang];
 
       // Categorías
       const filtersEl = document.getElementById('portfolio-filters');
       filtersEl.querySelectorAll('.filter-btn').forEach(btn => btn.remove());
-      portfolioCategories.forEach(cat => {
-        const count = cat.filter === '*'
-          ? portfolioProjects.length
-          : portfolioProjects.filter(p => p.category === cat.filter).length;
+      const categories = [{ id: '*', icon: 'bi-grid-3x3-gap', label: { es: t.all, en: t.all } }, ...portfolioData.categories];
+      categories.forEach(cat => {
+        const count = cat.id === '*'
+          ? portfolioData.projects.length
+          : portfolioData.projects.filter(p => p.category === cat.id).length;
+        if (!count) return;
+        const active = cat.id === currentPortfolioFilter;
         const btn = document.createElement('button');
-        const active = cat.filter === currentPortfolioFilter;
         btn.type = 'button';
         btn.className = 'filter-btn' + (active ? ' filter-active' : '');
-        btn.dataset.filter = cat.filter;
+        btn.dataset.filter = cat.id;
         btn.setAttribute('role', 'tab');
         btn.setAttribute('aria-selected', active);
-        btn.innerHTML = `<i class="bi ${cat.icon}"></i><span>${t[cat.key]}</span><span class="filter-count">${count}</span>`;
-        btn.addEventListener('click', () => filterPortfolio(cat.filter));
+        btn.innerHTML = `<i class="bi ${cat.icon}"></i><span>${cat.label[lang]}</span><span class="filter-count">${count}</span>`;
+        btn.addEventListener('click', () => filterPortfolio(cat.id));
         filtersEl.appendChild(btn);
-      });
-
-      // Proyectos
-      const grid = document.getElementById('portfolio-grid');
-      grid.innerHTML = portfolioProjects.map(proj => {
-        const cat = portfolioCategories.find(c => c.filter === proj.category);
-        return `
-          <article class="portfolio-card" data-category="${proj.category}">
-            <div class="portfolio-media">
-              <img src="${proj.img}" alt="${proj.title[lang]}" loading="lazy" onerror="this.parentElement.classList.add('no-image'); this.remove();">
-              <i class="bi ${cat.icon} portfolio-placeholder" aria-hidden="true"></i>
-              <span class="portfolio-badge"><i class="bi ${cat.icon}"></i> ${t[cat.key]}</span>
-              <div class="portfolio-overlay">
-                <a href="${proj.demo}" target="_blank" rel="noopener" title="${labels.view}"><i class="bi bi-eye"></i></a>
-                <a href="${proj.github}" target="_blank" rel="noopener" title="GitHub"><i class="bi bi-github"></i></a>
-              </div>
-            </div>
-            <div class="portfolio-body">
-              <h4>${proj.title[lang]}</h4>
-              <p>${proj.desc[lang]}</p>
-              <ul class="portfolio-stack">${proj.stack.map(s => `<li>${s}</li>`).join('')}</ul>
-              <div class="portfolio-actions">
-                <a href="${proj.demo}" target="_blank" rel="noopener" class="btn-project">${labels.view} <i class="bi bi-arrow-up-right"></i></a>
-                ${proj.demo1 ? `<a href="${proj.demo1}" target="_blank" rel="noopener" class="btn-ghost"><i class="bi bi-display"></i> ${labels.public}</a>` : ''}
-                <a href="${proj.github}" target="_blank" rel="noopener" class="btn-ghost"><i class="bi bi-github"></i> ${labels.code}</a>
-              </div>
-            </div>
-          </article>
-        `;
-      }).join('');
-
-      const cards = [...grid.querySelectorAll('.portfolio-card')];
-      cards.forEach(card => {
-        card.hidden = !(currentPortfolioFilter === '*' || card.dataset.category === currentPortfolioFilter);
-        card.addEventListener('mousemove', trackCardSpotlight);
       });
       requestAnimationFrame(moveFilterIndicator);
 
-      // La primera vez espera a que la sección entre en pantalla; luego revela directamente
-      if (portfolioObserver === undefined && 'IntersectionObserver' in window) {
-        portfolioObserver = new IntersectionObserver(entries => {
-          if (entries.some(entry => entry.isIntersecting)) {
-            revealPortfolioCards([...grid.querySelectorAll('.portfolio-card:not([hidden])')]);
-            portfolioObserver.disconnect();
-            portfolioObserver = null;
-          }
-        }, { threshold: 0.1 });
-        portfolioObserver.observe(grid);
-      } else if (!portfolioObserver) {
-        revealPortfolioCards(cards.filter(card => !card.hidden));
-      }
+      renderPortfolioView();
+    }
+
+    // Las cards se animan la primera vez que la sección entra en pantalla
+    if ('IntersectionObserver' in window) {
+      const portfolioObserver = new IntersectionObserver(entries => {
+        if (entries.some(entry => entry.isIntersecting)) {
+          portfolioRevealed = true;
+          revealPortfolioCards([...document.querySelectorAll('#portfolio-stage > :not([hidden]) .portfolio-card')]);
+          portfolioObserver.disconnect();
+        }
+      }, { threshold: 0.1 });
+      portfolioObserver.observe(document.getElementById('portfolio-stage'));
+    } else {
+      portfolioRevealed = true;
     }
     window.addEventListener('resize', moveFilterIndicator);
     window.addEventListener('load', moveFilterIndicator);
+    loadPortfolio();
 
     // Función para cambiar idioma
     function setLanguage(lang) {
@@ -843,6 +905,7 @@
       // Skills
       document.querySelector('#skills .section-title h2').textContent = translations[lang].skillsTitle;
       document.querySelector('#skills .section-title p').textContent = translations[lang].skillsDesc;
+      renderSkills(lang);
       // Contact
       document.querySelector('#contact .section-title h2').textContent = translations[lang].contactTitle;
       document.querySelector('#contact-desc').textContent = translations[lang].contactDesc;
@@ -856,31 +919,7 @@
       // Servicios
       document.querySelector('#services .section-title h2').textContent = translations[lang].servicesTitle;
       document.querySelector('#services-intro').textContent = translations[lang].servicesIntro;
-      // Renderizar servicios
-      const services = [
-        { key: 'service1' },
-        { key: 'service2' },
-        { key: 'service3' },
-        { key: 'service4' },
-        { key: 'service5' },
-        { key: 'service6' },
-        { key: 'service7' }
-      ];
-      const servicesList = document.getElementById('services-list');
-      servicesList.innerHTML = '';
-      services.forEach((srv, idx) => {
-        servicesList.innerHTML += `
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="${100 + idx * 100}">
-            <div class="service-item d-flex h-100">
-              <div class="icon flex-shrink-0"><i class="bi ${translations[lang][srv.key + 'Icon']}"></i></div>
-              <div>
-                <h4 class="title">${translations[lang][srv.key]}</h4>
-                <p class="description">${translations[lang][srv.key + 'Desc']}</p>
-              </div>
-            </div>
-          </div>
-        `;
-      });
+      renderServices(lang);
       // Portfolio
       document.querySelector('#portfolio .section-title h2').textContent = translations[lang].portfolioTitle;
       document.querySelector('#portfolio-desc').textContent = translations[lang].portfolioDesc;

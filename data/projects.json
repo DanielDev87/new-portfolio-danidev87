@@ -1,0 +1,119 @@
+{
+  "categories": [
+    { "id": "app-movil", "icon": "bi-phone", "label": { "es": "App Móvil", "en": "Mobile App" } },
+    { "id": "app-web", "icon": "bi-window-stack", "label": { "es": "App Web", "en": "Web App" } },
+    { "id": "websites", "icon": "bi-globe2", "label": { "es": "Websites", "en": "Websites" } },
+    { "id": "backend", "icon": "bi-hdd-network", "label": { "es": "Backend", "en": "Backend" } }
+  ],
+  "projects": [
+    {
+      "title": { "es": "App Móvil de empleos", "en": "Jobs Mobile App" },
+      "desc": {
+        "es": "Aplicación móvil para la búsqueda de empleos, con publicación de vacantes y gestión de perfiles.",
+        "en": "Mobile app for job search, with job postings and profile management."
+      },
+      "stack": ["React Native", "Expo", "Node.js", "Firebase", "Cloudinary"],
+      "img": "assets/img/portfolio/app-7.png",
+      "category": "app-movil",
+      "github": "https://github.com/DanielDev87/app-empleos",
+      "demo": "https://www.youtube.com/watch?v=YqQm_gva_aI"
+    },
+    {
+      "title": { "es": "Gestor de Tareas Web", "en": "Web Task Manager" },
+      "desc": {
+        "es": "Plataforma web para la gestión de tareas tipo To Do List.",
+        "en": "Web platform for To Do List style task management."
+      },
+      "stack": ["React", "Node.js", "Express", "MongoDB"],
+      "img": "assets/img/portfolio/app-1.png",
+      "category": "app-web",
+      "github": "https://github.com/DanielDev87/todo-list",
+      "demo": "https://stellular-frangollo-104038.netlify.app/"
+    },
+    {
+      "title": { "es": "App Bingo", "en": "Bingo App" },
+      "desc": {
+        "es": "Aplicación web para gestionar un juego de bingo con dos vistas: una para el administrador y otra para el público.",
+        "en": "Web application for managing a bingo game with two views: one for the administrator and one for the public."
+      },
+      "stack": ["Node.js", "HTML", "CSS", "JavaScript"],
+      "img": "assets/img/portfolio/app-2.png",
+      "category": "app-web",
+      "github": "https://github.com/DanielDev87/app-bingo",
+      "demo": "https://jade-kringle-8d58db.netlify.app/",
+      "demo2": "https://jade-kringle-8d58db.netlify.app/display.html"
+    },
+    {
+      "title": { "es": "Mario Bros 1", "en": "Mario Bros 1" },
+      "desc": {
+        "es": "Recreación web del nivel 1 del clásico Mario Bros.",
+        "en": "Web recreation of level 1 of the classic Mario Bros."
+      },
+      "stack": ["HTML", "CSS", "JavaScript"],
+      "img": "assets/img/portfolio/app-3.png",
+      "category": "app-web",
+      "github": "https://github.com/DanielDev87/mario-bross-game",
+      "demo": "https://playful-begonia-a5fe19.netlify.app/"
+    },
+    {
+      "title": { "es": "API Rest Gestión de Cursos", "en": "Courses Management REST API" },
+      "desc": {
+        "es": "API para gestionar la información de los cursos ofrecidos por CESDE.",
+        "en": "API for managing the information of the courses offered by CESDE."
+      },
+      "stack": ["Java", "Spring Boot", "REST"],
+      "img": "assets/img/portfolio/app-4.png",
+      "category": "backend",
+      "github": "https://github.com/DanielDev87/gestor-cursos-cesde",
+      "demo": "https://github.com/DanielDev87/gestor-cursos-cesde"
+    },
+    {
+      "title": { "es": "Landing Page ArtSmile", "en": "ArtSmile Landing Page" },
+      "desc": {
+        "es": "Sitio web de presentación para una clínica odontológica.",
+        "en": "Showcase website for a dental clinic."
+      },
+      "stack": ["HTML5", "PHP", "CSS3", "Bootstrap"],
+      "img": "assets/img/portfolio/app-5.png",
+      "category": "websites",
+      "github": "https://github.com/DanielDev87/landing-artsmileav",
+      "demo": "https://www.artsmileav.com/"
+    },
+    {
+      "title": { "es": "App Food", "en": "App Food" },
+      "desc": {
+        "es": "Aplicación web para la gestión de restaurantes y bares.",
+        "en": "Web application for managing restaurants and bars."
+      },
+      "stack": ["Node.js", "PHP", "MySQL", "Bootstrap"],
+      "img": "assets/img/portfolio/app-6.png",
+      "category": "app-web",
+      "github": "https://github.com/DanielDev87/app-food",
+      "demo": "https://www.artsmileav.com/oceanshots"
+    },
+    {
+      "title": { "es": "Sitio Web Portafolio", "en": "Portfolio Website" },
+      "desc": {
+        "es": "Sitio web personal bilingüe para mostrar proyectos y experiencia profesional.",
+        "en": "Bilingual personal website to showcase projects and professional experience."
+      },
+      "stack": ["HTML", "CSS", "JavaScript"],
+      "img": "assets/img/portfolio/branding-2.jpg",
+      "category": "websites",
+      "github": "https://github.com/DanielDev87/new-portfolio-danidev87",
+      "demo": "https://portafolioweb.com"
+    },
+    {
+      "title": { "es": "Backend para E-commerce", "en": "E-commerce Backend" },
+      "desc": {
+        "es": "API para tienda online con autenticación y pagos.",
+        "en": "API for an online store with authentication and payments."
+      },
+      "stack": ["Node.js", "MongoDB"],
+      "img": "assets/img/portfolio/product-3.jpg",
+      "category": "backend",
+      "github": "https://github.com/usuario/backend-ecommerce",
+      "demo": "https://ecommerceapi.com"
+    }
+  ]
+}
