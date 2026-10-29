@@ -31,46 +31,6 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 
-  <style>
-    .stats-desc {
-      display: block;
-      font-size: 1.1rem;
-      color: var(--heading-color);
-      font-weight: 600;
-      margin-top: 0.5rem;
-      text-align: center;
-    }
-    .whatsapp-float {
-      position: fixed;
-      width: 60px;
-      height: 60px;
-      bottom: 30px;
-      right: 30px;
-      background-color: #25d366;
-      color: #fff;
-      border-radius: 50px;
-      text-align: center;
-      font-size: 2.5rem;
-      box-shadow: 2px 2px 3px #999;
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background 0.3s;
-    }
-    .whatsapp-float:hover {
-      background: #20ba5a;
-      color: #fff;
-      text-decoration: none;
-    }
-    .social-links-lg a {
-      font-size: 2.5rem !important;
-      margin: 0 18px !important;
-    }
-    .social-links-lg a i {
-      font-size: 2.5rem !important;
-    }
-  </style>
 </head>
 
 <body class="index-page">
@@ -100,7 +60,6 @@
       <ul>
         <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
         <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
         <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
         <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
         <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
@@ -118,11 +77,17 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
-      <img src="assets/img/hero-bg.jpeg" alt="" data-aos="fade-in" class="">
+      <img src="assets/img/Imagen%20Encabezado.jpg" alt="DanielDev87 - Desarrollador Freelance" class="hero-banner" data-aos="fade-in">
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h2>Daniel Agudelo</h2>
-        <p><span id="hero-iam"></span> <span class="typed" data-typed-items="Ingeniero de Software,Desarrollador,Consultor"></span></p>
+      <div class="container hero-content" data-aos="fade-up" data-aos-delay="200">
+        <h2 class="visually-hidden">Daniel Agudelo</h2>
+        <div class="hero-bar">
+          <p><span id="hero-iam"></span> <span class="typed" data-typed-items="Ingeniero de Software,Desarrollador,Consultor"></span></p>
+          <div class="hero-actions">
+            <a href="#portfolio" class="hero-btn hero-btn-primary"><i class="bi bi-grid-1x2"></i> <span id="hero-cta-portfolio">Ver portafolio</span></a>
+            <a href="#contact" class="hero-btn hero-btn-ghost"><i class="bi bi-chat-dots"></i> <span id="hero-cta-contact">Contáctame</span></a>
+          </div>
+        </div>
       </div>
 
     </section><!-- /Hero Section -->
@@ -140,7 +105,9 @@
 
         <div class="row gy-4 justify-content-center">
           <div class="col-lg-4">
-            <img src="assets/img/meavatar1.png" class="img-fluid" alt="">
+            <div class="about-badge">
+              <img src="assets/img/DanielDev87_%20Neon%20Developer%20Badge.png" class="img-fluid" alt="DanielDev87 Badge">
+            </div>
           </div>
           <div class="col-lg-8 content">
             <h2 id="about-role"></h2>
@@ -164,19 +131,21 @@
 
           <div class="col-lg-6 col-md-6">
             <div class="stats-item">
-              <i class="bi bi-award"></i>
-              <span>14+</span>
-              <p><strong id="stats-experience"></strong></p>
-              <span id="stats-experience-desc" class="stats-desc"></span>
+              <div class="stats-icon"><i class="bi bi-award"></i></div>
+              <div>
+                <span class="stats-number"><span data-purecounter-start="0" data-purecounter-end="14" data-purecounter-duration="2" class="purecounter"></span>+</span>
+                <p id="stats-experience"></p>
+              </div>
             </div>
           </div><!-- End Stats Item -->
 
           <div class="col-lg-6 col-md-6">
             <div class="stats-item">
-              <i class="bi bi-briefcase"></i>
-              <span>100+</span>
-              <p><strong id="stats-projects"></strong></p>
-              <span id="stats-projects-desc" class="stats-desc"></span>
+              <div class="stats-icon"><i class="bi bi-briefcase"></i></div>
+              <div>
+                <span class="stats-number"><span data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="2" class="purecounter"></span>+</span>
+                <p id="stats-projects"></p>
+              </div>
             </div>
           </div><!-- End Stats Item -->
 
@@ -233,51 +202,6 @@
 
     </section><!-- /Skills Section -->
 
-    <!-- Resume Section -->
-    <section id="resume" class="resume section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Resume</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title" id="resume-summary-title"></h3>
-            <div class="resume-item pb-0">
-              <h4>Daniel Agudelo</h4>
-              <p id="resume-summary-desc"></p>
-            </div><!-- End Resume Item -->
-            <h3 class="resume-title" id="resume-education-title"></h3>
-            <div class="resume-item">
-              <h4 id="resume-edu1-degree"></h4>
-              <p><em id="resume-edu1"></em></p>
-            </div>
-            <div class="resume-item">
-              <h4 id="resume-edu2-degree"></h4>
-              <p><em id="resume-edu2"></em></p>
-            </div>
-            <div class="resume-item">
-              <h4 id="resume-edu3-degree"></h4>
-              <p><em id="resume-edu3"></em></p>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title" id="resume-experience-title"></h3>
-            <div id="resume-experience-list"></div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Resume Section -->
-
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio section light-background">
 
@@ -289,23 +213,16 @@
 
       <div class="container">
 
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+        <div class="portfolio-filters-wrap" data-aos="fade-up" data-aos-delay="100">
+          <div class="portfolio-filters" id="portfolio-filters" role="tablist">
+            <span class="filter-indicator" aria-hidden="true"></span>
+            <!-- Las categorías se renderizan dinámicamente por JS -->
+          </div>
+        </div><!-- End Portfolio Filters -->
 
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active" id="portfolio-cat-all">TODO</li>
-            <li data-filter=".filter-app-movil" id="portfolio-cat-app-movil">APP MOVIL</li>
-            <li data-filter=".filter-app-web" id="portfolio-cat-app-web">APP WEB</li>
-            <li data-filter=".filter-websites" id="portfolio-cat-websites">WEBSITES</li>
-            <li data-filter=".filter-backend" id="portfolio-cat-backend">BACKEND</li>
-          </ul><!-- End Portfolio Filters -->
-
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <!-- Las cards se renderizan dinámicamente por JS -->
-
-          </div><!-- End Portfolio Container -->
-
-        </div>
+        <div class="portfolio-grid" id="portfolio-grid">
+          <!-- Las cards se renderizan dinámicamente por JS -->
+        </div><!-- End Portfolio Container -->
 
       </div>
 
@@ -385,7 +302,6 @@
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
   <!-- Main JS File -->
@@ -397,7 +313,6 @@
       es: {
         home: 'Inicio',
         about: 'Sobre mí',
-        resume: 'Currículum',
         portfolio: 'Portafolio',
         services: 'Servicios',
         contact: 'Contacto',
@@ -426,41 +341,6 @@
         statsWorkers: 'Colaboradores',
         skillsTitle: 'Habilidades',
         skillsDesc: 'Cuento con una sólida formación y experiencia en tecnologías de desarrollo web, móvil y backend, así como en metodologías ágiles, cloud y buenas prácticas de ingeniería de software. Mi enfoque es entregar soluciones robustas, escalables y alineadas a los objetivos del negocio.',
-        resumeTitle: 'Currículum',
-        resumeDesc: 'Profesional apasionado por la ingeniería de software, la consultoría tecnológica y la docencia universitaria. Mi trayectoria se ha enfocado en liderar proyectos innovadores, formar talento en el sector TI y aportar soluciones que generan valor real a empresas y estudiantes.',
-        resumeSumary: 'Resumen',
-        resumeEducation: 'Educación',
-        resumeExperience: 'Experiencia profesional',
-        resumeEdu1: "Politécnico Colombiano 'Jaime Isaza Cadavid'",
-        resumeEdu1Degree: 'Magister, Ingeniería de software',
-        resumeEdu2: 'Universidad Industrial de Santander',
-        resumeEdu2Degree: 'Full Stack Developer, Ciencias de la Computación y Soporte',
-        resumeEdu3: 'Católica del Norte Fundación Universitaria',
-        resumeEdu3Degree: 'Ingeniería, Ingeniería informática',
-        resumeSenior: 'Especialista senior en diseño gráfico',
-        resumeSpecialist: 'Especialista en diseño gráfico',
-        resumeDate1: '2015 - 2016',
-        resumeDate2: '2010 - 2014',
-        resumeDate3: '2019 - Presente',
-        resumeDate4: '2017 - 2018',
-        resumeLocation: 'Rochester Institute of Technology, Rochester, NY',
-        resumeLocation2: 'Experion, Nueva York, NY',
-        resumeLocation3: 'Stepping Stone Advertising, Nueva York, NY',
-        resumeSumaryName: 'Brandon Johnson',
-        resumeSumaryDesc: 'Diseñador gráfico innovador y orientado a plazos con más de 3 años de experiencia diseñando y desarrollando material de marketing digital/impreso centrado en el usuario desde el concepto inicial hasta el producto final.',
-        resumeSumaryList1: 'Portland par 127, Orlando, FL',
-        resumeSumaryList2: '(123) 456-7891',
-        resumeSumaryList3: 'alice.barkley@example.com',
-        resumeMasterDesc: 'Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend',
-        resumeBachelorDesc: 'Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila',
-        resumeSeniorDesc1: 'Liderar el diseño, desarrollo e implementación de la comunicación gráfica, diseño y producción.',
-        resumeSeniorDesc2: 'Delegar tareas a los 7 miembros del equipo de diseño y asesorar en todos los aspectos del proyecto.',
-        resumeSeniorDesc3: 'Supervisar la evaluación de todos los materiales gráficos para garantizar la calidad y precisión del diseño.',
-        resumeSeniorDesc4: 'Supervisar el uso eficiente de los presupuestos de proyectos de producción que van desde $2,000 hasta $25,000',
-        resumeSpecialistDesc1: 'Desarrolló numerosos programas de marketing (logotipos, folletos, infografías, presentaciones y anuncios).',
-        resumeSpecialistDesc2: 'Gestionó hasta 5 proyectos o tareas a la vez bajo presión.',
-        resumeSpecialistDesc3: 'Recomendó y asesoró a los clientes sobre el diseño gráfico más adecuado.',
-        resumeSpecialistDesc4: 'Creó más de 4 presentaciones y propuestas de diseño al mes para clientes y gerentes de cuentas.',
         portfolioTitle: 'Portafolio',
         portfolioDesc: 'Explora una selección de mis proyectos y colaboraciones más destacados en desarrollo de software, aplicaciones web, móviles y soluciones tecnológicas a medida. Cada trabajo refleja mi compromiso con la calidad, la innovación y la satisfacción de mis clientes. ¡Descubre cómo puedo aportar valor a tu empresa o idea!',
         portfolioAll: 'TODO',
@@ -518,22 +398,22 @@
         servicesIntro: 'Conoce lo que puedo hacer por ti y algunos de mis proyectos y colaboraciones.',
         service1: 'Web sites y Landing Pages',
         service1Desc: 'Tu propio sitio web o quizás una página de bienvenida a tu empresa o proyecto.',
-        service1Icon: 'bi-person-vcard',
+        service1Icon: 'bi-window-sidebar',
         service2: 'Aplicaciones web',
         service2Desc: 'Desarrollo de aplicaciones web a la medida de tus necesidades y de tu empresa.',
-        service2Icon: 'bi-clock',
+        service2Icon: 'bi-code-slash',
         service3: 'Aplicaciones móviles',
         service3Desc: 'Diseño y construcción de Apps híbridas a tu medida con las mejores tecnologías disponibles.',
-        service3Icon: 'bi-journal-text',
+        service3Icon: 'bi-phone',
         service4: 'Integraciones',
         service4Desc: 'Integración de servicios, aplicaciones y proyectos, bajo estándares de seguridad y rendimiento.',
-        service4Icon: 'bi-calculator',
+        service4Icon: 'bi-plug',
         service5: 'Gestión de LMS',
         service5Desc: 'Gestión de plataformas LMS, contenidos digitales y soporte.',
-        service5Icon: 'bi-easel',
+        service5Icon: 'bi-mortarboard',
         service6: 'Tutorías y mentorías',
         service6Desc: 'Puedo acompañarte en tus procesos de aprendizaje relacionados a las TIC, especialmente en el mundo del software.',
-        service6Icon: 'bi-calendar',
+        service6Icon: 'bi-people',
         service7: 'Consultoría en diseño y desarrollo de software',
         service7Desc: 'Asesoría experta en el diseño, arquitectura y desarrollo de soluciones de software a medida para tu empresa o proyecto.',
         service7Icon: 'bi-lightbulb',
@@ -541,7 +421,6 @@
       en: {
         home: 'Home',
         about: 'About',
-        resume: 'Resume',
         portfolio: 'Portfolio',
         services: 'Services',
         contact: 'Contact',
@@ -570,41 +449,6 @@
         statsWorkers: 'Hard Workers',
         skillsTitle: 'Skills',
         skillsDesc: 'I have a strong background and experience in web, mobile, and backend development technologies, as well as agile methodologies, cloud, and software engineering best practices. My focus is on delivering robust, scalable solutions aligned with business goals.',
-        resumeTitle: 'Resume',
-        resumeDesc: 'Professional passionate about software engineering, technology consulting, and university teaching. My career has focused on leading innovative projects, training talent in the IT sector, and providing solutions that generate real value for companies and students.',
-        resumeSumary: 'Summary',
-        resumeEducation: 'Education',
-        resumeExperience: 'Professional Experience',
-        resumeEdu1: "Politécnico Colombiano 'Jaime Isaza Cadavid'",
-        resumeEdu1Degree: 'Master, Software Engineering',
-        resumeEdu2: 'Universidad Industrial de Santander',
-        resumeEdu2Degree: 'Full Stack Developer, Computer and Information Sciences and Support Services',
-        resumeEdu3: 'Católica del Norte Fundación Universitaria',
-        resumeEdu3Degree: 'Engineering, Computer Engineering',
-        resumeSenior: 'Senior graphic design specialist',
-        resumeSpecialist: 'Graphic design specialist',
-        resumeDate1: '2015 - 2016',
-        resumeDate2: '2010 - 2014',
-        resumeDate3: '2019 - Present',
-        resumeDate4: '2017 - 2018',
-        resumeLocation: 'Rochester Institute of Technology, Rochester, NY',
-        resumeLocation2: 'Experion, New York, NY',
-        resumeLocation3: 'Stepping Stone Advertising, New York, NY',
-        resumeSumaryName: 'Brandon Johnson',
-        resumeSumaryDesc: 'Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.',
-        resumeSumaryList1: 'Portland par 127, Orlando, FL',
-        resumeSumaryList2: '(123) 456-7891',
-        resumeSumaryList3: 'alice.barkley@example.com',
-        resumeMasterDesc: 'Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend',
-        resumeBachelorDesc: 'Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila',
-        resumeSeniorDesc1: 'Lead in the design, development, and implementation of the graphic, layout, and production communication materials',
-        resumeSeniorDesc2: 'Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project.',
-        resumeSeniorDesc3: 'Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design',
-        resumeSeniorDesc4: 'Oversee the efficient use of production project budgets ranging from $2,000 - $25,000',
-        resumeSpecialistDesc1: 'Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).',
-        resumeSpecialistDesc2: 'Managed up to 5 projects or tasks at a given time while under pressure',
-        resumeSpecialistDesc3: 'Recommended and consulted with clients on the most appropriate graphic design',
-        resumeSpecialistDesc4: 'Created 4+ design presentations and proposals a month for clients and account managers',
         portfolioTitle: 'Portfolio',
         portfolioDesc: 'Explore a selection of my most outstanding projects and collaborations in software development, web and mobile applications, and custom technology solutions. Each work reflects my commitment to quality, innovation, and client satisfaction. Discover how I can add value to your company or idea!',
         portfolioAll: 'ALL',
@@ -662,22 +506,22 @@
         servicesIntro: 'Discover what I can do for you and some of my projects and collaborations.',
         service1: 'Websites & Landing Pages',
         service1Desc: 'Your own website or maybe a landing page for your company or project.',
-        service1Icon: 'bi-person-vcard',
+        service1Icon: 'bi-window-sidebar',
         service2: 'Web Applications',
         service2Desc: 'Custom web application development tailored to your needs and your company.',
-        service2Icon: 'bi-clock',
+        service2Icon: 'bi-code-slash',
         service3: 'Mobile Applications',
         service3Desc: 'Design and development of custom hybrid apps with the best available technologies.',
-        service3Icon: 'bi-journal-text',
+        service3Icon: 'bi-phone',
         service4: 'Integrations',
         service4Desc: 'Integration of services, applications, and projects, following security and performance standards.',
-        service4Icon: 'bi-calculator',
+        service4Icon: 'bi-plug',
         service5: 'LMS Management',
         service5Desc: 'Management of LMS platforms, digital content, and support.',
-        service5Icon: 'bi-easel',
+        service5Icon: 'bi-mortarboard',
         service6: 'Tutoring & Mentoring',
         service6Desc: 'I can support you in your learning processes related to ICT, especially in the world of software.',
-        service6Icon: 'bi-calendar',
+        service6Icon: 'bi-people',
         service7: 'Software Design & Development Consulting',
         service7Desc: 'Expert advice on the design, architecture, and development of custom software solutions for your company or project.',
         service7Icon: 'bi-lightbulb',
@@ -689,20 +533,22 @@
       {
         title: { es: "App Móvil de empleos", en: "Jobs Mobile App" },
         desc: {
-          es: "Aplicación móvil para la búsqueda de empleos. Desarrollada en React Native, Expo, Node.js, Firebase, Cloudinary.",
-          en: "Mobile app for job search. Developed in React Native, Expo, Node.js, Firebase, Cloudinary."
+          es: "Aplicación móvil para la búsqueda de empleos, con publicación de vacantes y gestión de perfiles.",
+          en: "Mobile app for job search, with job postings and profile management."
         },
+        stack: ["React Native", "Expo", "Node.js", "Firebase", "Cloudinary"],
         img: "assets/img/portfolio/app-7.png",
-        category: "filter-app-movil",      
+        category: "filter-app-movil",
         github: "https://github.com/DanielDev87/app-empleos",
         demo: "https://www.youtube.com/watch?v=YqQm_gva_aI"
       },
       {
         title: { es: "Gestor de Tareas Web", en: "Web Task Manager" },
         desc: {
-          es: "Plataforma web para gestión de tareas tipo To Do List. Stack: Node.js, Express, MongoDB, React.",
-          en: "Web platform for task . Stack: Node.js, Express, MongoDB, React."
+          es: "Plataforma web para la gestión de tareas tipo To Do List.",
+          en: "Web platform for To Do List style task management."
         },
+        stack: ["React", "Node.js", "Express", "MongoDB"],
         img: "assets/img/portfolio/app-1.png",
         category: "filter-app-web",
         github: "https://github.com/DanielDev87/todo-list",
@@ -711,9 +557,10 @@
       {
         title: { es: "App Bingo", en: "Bingo App" },
         desc: {
-          es: "Aplicación web para gestión de un juego de bingo que contiene 2 vistas, una para el administrador y otra para el público. Stack: Node.js, HTML, CSS, JavaScript.",
-          en: "Web application for managing a bingo game that contains 2 views, one for the administrator and one for the public. Stack: Node.js, HTML, CSS, JavaScript."
+          es: "Aplicación web para gestionar un juego de bingo con dos vistas: una para el administrador y otra para el público.",
+          en: "Web application for managing a bingo game with two views: one for the administrator and one for the public."
         },
+        stack: ["Node.js", "HTML", "CSS", "JavaScript"],
         img: "assets/img/portfolio/app-2.png",
         category: "filter-app-web",
         github: "https://github.com/DanielDev87/app-bingo",
@@ -721,45 +568,48 @@
         demo1: "https://jade-kringle-8d58db.netlify.app/display.html"
       },
       {
-          title: { es: "Mario Bross 1", en: "Mario Bross 1" },
-            desc: {
-              es: "Juego Web Mario Bros nivel 1. Stack: HTML, CSS, JavaScript.",
-              en: "Web Mario Bros level 1. Stack: HTML, CSS, JavaScript."
-            },
-            img: "assets/img/portfolio/app-3.png",
-            category: "filter-app-web",
-            github: "https://github.com/DanielDev87/mario-bross-game",
-            demo: "https://playful-begonia-a5fe19.netlify.app//"
+        title: { es: "Mario Bros 1", en: "Mario Bros 1" },
+        desc: {
+          es: "Recreación web del nivel 1 del clásico Mario Bros.",
+          en: "Web recreation of level 1 of the classic Mario Bros."
+        },
+        stack: ["HTML", "CSS", "JavaScript"],
+        img: "assets/img/portfolio/app-3.png",
+        category: "filter-app-web",
+        github: "https://github.com/DanielDev87/mario-bross-game",
+        demo: "https://playful-begonia-a5fe19.netlify.app/"
       },
       {
-          title: { es: "API Rest Gestión de Cursos", en: "API Rest Management of Courses" },
-            desc: {
-              es: "Esta es una aplicación web desarrollada con Spring Boot que permite gestionar la información de los cursos ofrecidos por CESDE.",
-              en: "This is a web application developed with Spring Boot that allows managing the information of the courses offered by CESDE."
-            },
-            img: "assets/img/portfolio/app-4.png",
-            category: "filter-backend",
-            github: "https://github.com/DanielDev87/gestor-cursos-cesde",
-            demo: "https://github.com/DanielDev87/gestor-cursos-cesde"
+        title: { es: "API Rest Gestión de Cursos", en: "Courses Management REST API" },
+        desc: {
+          es: "API para gestionar la información de los cursos ofrecidos por CESDE.",
+          en: "API for managing the information of the courses offered by CESDE."
+        },
+        stack: ["Java", "Spring Boot", "REST"],
+        img: "assets/img/portfolio/app-4.png",
+        category: "filter-backend",
+        github: "https://github.com/DanielDev87/gestor-cursos-cesde",
+        demo: "https://github.com/DanielDev87/gestor-cursos-cesde"
       },
-
       {
         title: { es: "Landing Page ArtSmile", en: "ArtSmile Landing Page" },
         desc: {
-          es: "Sitio web de presentación para clínica odontológica. HTML5, PHP, CSS3, Bootstrap.",
-          en: "Showcase website for a dental clinic. HTML5, PHP, CSS3, Bootstrap."
+          es: "Sitio web de presentación para una clínica odontológica.",
+          en: "Showcase website for a dental clinic."
         },
+        stack: ["HTML5", "PHP", "CSS3", "Bootstrap"],
         img: "assets/img/portfolio/app-5.png",
         category: "filter-websites",
         github: "https://github.com/DanielDev87/landing-artsmileav",
         demo: "https://www.artsmileav.com/"
       },
       {
-        title: { es: "APP FOOD", en: "APP FOOD" },
+        title: { es: "App Food", en: "App Food" },
         desc: {
-          es: "Aplicación Web para la gestión de restaurantes y bares. Stack: Node.js, PHP, MySQL, Bootstrap.",
-          en: "Web application for managing restaurants and bars. Stack: Node.js, PHP, MySQL, Bootstrap."
+          es: "Aplicación web para la gestión de restaurantes y bares.",
+          en: "Web application for managing restaurants and bars."
         },
+        stack: ["Node.js", "PHP", "MySQL", "Bootstrap"],
         img: "assets/img/portfolio/app-6.png",
         category: "filter-app-web",
         github: "https://github.com/DanielDev87/app-food",
@@ -768,20 +618,22 @@
       {
         title: { es: "Sitio Web Portafolio", en: "Portfolio Website" },
         desc: {
-          es: "Sitio web personal para mostrar proyectos y experiencia profesional. HTML, CSS, JS.",
-          en: "Personal website to showcase projects and professional experience. HTML, CSS, JS."
+          es: "Sitio web personal bilingüe para mostrar proyectos y experiencia profesional.",
+          en: "Bilingual personal website to showcase projects and professional experience."
         },
+        stack: ["HTML", "CSS", "JavaScript"],
         img: "assets/img/portfolio/branding-2.jpg",
         category: "filter-websites",
-        github: "https://github.com/usuario/portafolio-web",
+        github: "https://github.com/DanielDev87/new-portfolio-danidev87",
         demo: "https://portafolioweb.com"
       },
       {
         title: { es: "Backend para E-commerce", en: "E-commerce Backend" },
         desc: {
-          es: "API para tienda online con autenticación y pagos. Node.js, MongoDB.",
-          en: "API for online store with authentication and payments. Node.js, MongoDB."
+          es: "API para tienda online con autenticación y pagos.",
+          en: "API for an online store with authentication and payments."
         },
+        stack: ["Node.js", "MongoDB"],
         img: "assets/img/portfolio/product-3.jpg",
         category: "filter-backend",
         github: "https://github.com/usuario/backend-ecommerce",
@@ -789,27 +641,145 @@
       }
     ];
 
+    const portfolioCategories = [
+      { filter: '*', key: 'portfolioAll', icon: 'bi-grid-3x3-gap' },
+      { filter: 'filter-app-movil', key: 'portfolioAppMovil', icon: 'bi-phone' },
+      { filter: 'filter-app-web', key: 'portfolioAppWeb', icon: 'bi-window-stack' },
+      { filter: 'filter-websites', key: 'portfolioWebsites', icon: 'bi-globe2' },
+      { filter: 'filter-backend', key: 'portfolioBackend', icon: 'bi-hdd-network' }
+    ];
+    let currentPortfolioFilter = '*';
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Mueve la "píldora" del filtro activo bajo la categoría seleccionada
+    function moveFilterIndicator() {
+      const active = document.querySelector('#portfolio-filters .filter-btn.filter-active');
+      const indicator = document.querySelector('#portfolio-filters .filter-indicator');
+      if (!active || !indicator) return;
+      indicator.style.width = active.offsetWidth + 'px';
+      indicator.style.transform = `translateX(${active.offsetLeft}px)`;
+    }
+
+    // Revela las cards visibles con un retardo escalonado
+    function revealPortfolioCards(cards) {
+      cards.forEach((card, i) => {
+        card.style.setProperty('--delay', `${i * 80}ms`);
+        card.classList.remove('is-visible');
+      });
+      void document.getElementById('portfolio-grid').offsetWidth;
+      cards.forEach(card => card.classList.add('is-visible'));
+    }
+
+    function filterPortfolio(filter) {
+      if (filter === currentPortfolioFilter) return;
+      currentPortfolioFilter = filter;
+      document.querySelectorAll('#portfolio-filters .filter-btn').forEach(btn => {
+        const active = btn.dataset.filter === filter;
+        btn.classList.toggle('filter-active', active);
+        btn.setAttribute('aria-selected', active);
+      });
+      moveFilterIndicator();
+
+      const grid = document.getElementById('portfolio-grid');
+      const cards = [...grid.querySelectorAll('.portfolio-card')];
+      const matches = card => filter === '*' || card.dataset.category === filter;
+
+      cards.forEach(card => card.classList.add('is-leaving'));
+      setTimeout(() => {
+        cards.forEach(card => {
+          card.classList.remove('is-leaving');
+          card.hidden = !matches(card);
+        });
+        revealPortfolioCards(cards.filter(matches));
+      }, reduceMotion ? 0 : 280);
+    }
+
+    // Efecto de luz que sigue al cursor sobre cada card
+    function trackCardSpotlight(e) {
+      const card = e.currentTarget;
+      const rect = card.getBoundingClientRect();
+      card.style.setProperty('--mx', `${e.clientX - rect.left}px`);
+      card.style.setProperty('--my', `${e.clientY - rect.top}px`);
+    }
+
+    let portfolioObserver;
     function renderPortfolio(lang) {
-      const container = document.querySelector('.isotope-container');
-      container.innerHTML = '';
-      portfolioProjects.forEach(proj => {
-        container.innerHTML += `
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item ${proj.category}">
-            <div class="portfolio-content h-100">
-              <img src="${proj.img}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>${proj.title[lang]}</h4>
-                <p>${proj.desc[lang]}</p>
-                <div class="portfolio-buttons">
-                  <a href="${proj.github}" target="_blank" class="btn btn-sm btn-dark me-2"><i class="bi bi-github"></i> GitHub</a>
-                  <a href="${proj.demo}" target="_blank" class="btn btn-sm btn-primary"><i class="bi bi-box-arrow-up-right"></i> ${lang === 'es' ? 'Ver Proyecto' : 'View Project'}</a>
-                </div>
+      const t = translations[lang];
+      const labels = lang === 'es'
+        ? { view: 'Ver proyecto', public: 'Vista pública', code: 'Código' }
+        : { view: 'View project', public: 'Public view', code: 'Code' };
+
+      // Categorías
+      const filtersEl = document.getElementById('portfolio-filters');
+      filtersEl.querySelectorAll('.filter-btn').forEach(btn => btn.remove());
+      portfolioCategories.forEach(cat => {
+        const count = cat.filter === '*'
+          ? portfolioProjects.length
+          : portfolioProjects.filter(p => p.category === cat.filter).length;
+        const btn = document.createElement('button');
+        const active = cat.filter === currentPortfolioFilter;
+        btn.type = 'button';
+        btn.className = 'filter-btn' + (active ? ' filter-active' : '');
+        btn.dataset.filter = cat.filter;
+        btn.setAttribute('role', 'tab');
+        btn.setAttribute('aria-selected', active);
+        btn.innerHTML = `<i class="bi ${cat.icon}"></i><span>${t[cat.key]}</span><span class="filter-count">${count}</span>`;
+        btn.addEventListener('click', () => filterPortfolio(cat.filter));
+        filtersEl.appendChild(btn);
+      });
+
+      // Proyectos
+      const grid = document.getElementById('portfolio-grid');
+      grid.innerHTML = portfolioProjects.map(proj => {
+        const cat = portfolioCategories.find(c => c.filter === proj.category);
+        return `
+          <article class="portfolio-card" data-category="${proj.category}">
+            <div class="portfolio-media">
+              <img src="${proj.img}" alt="${proj.title[lang]}" loading="lazy" onerror="this.parentElement.classList.add('no-image'); this.remove();">
+              <i class="bi ${cat.icon} portfolio-placeholder" aria-hidden="true"></i>
+              <span class="portfolio-badge"><i class="bi ${cat.icon}"></i> ${t[cat.key]}</span>
+              <div class="portfolio-overlay">
+                <a href="${proj.demo}" target="_blank" rel="noopener" title="${labels.view}"><i class="bi bi-eye"></i></a>
+                <a href="${proj.github}" target="_blank" rel="noopener" title="GitHub"><i class="bi bi-github"></i></a>
               </div>
             </div>
-          </div>
+            <div class="portfolio-body">
+              <h4>${proj.title[lang]}</h4>
+              <p>${proj.desc[lang]}</p>
+              <ul class="portfolio-stack">${proj.stack.map(s => `<li>${s}</li>`).join('')}</ul>
+              <div class="portfolio-actions">
+                <a href="${proj.demo}" target="_blank" rel="noopener" class="btn-project">${labels.view} <i class="bi bi-arrow-up-right"></i></a>
+                ${proj.demo1 ? `<a href="${proj.demo1}" target="_blank" rel="noopener" class="btn-ghost"><i class="bi bi-display"></i> ${labels.public}</a>` : ''}
+                <a href="${proj.github}" target="_blank" rel="noopener" class="btn-ghost"><i class="bi bi-github"></i> ${labels.code}</a>
+              </div>
+            </div>
+          </article>
         `;
+      }).join('');
+
+      const cards = [...grid.querySelectorAll('.portfolio-card')];
+      cards.forEach(card => {
+        card.hidden = !(currentPortfolioFilter === '*' || card.dataset.category === currentPortfolioFilter);
+        card.addEventListener('mousemove', trackCardSpotlight);
       });
+      requestAnimationFrame(moveFilterIndicator);
+
+      // La primera vez espera a que la sección entre en pantalla; luego revela directamente
+      if (portfolioObserver === undefined && 'IntersectionObserver' in window) {
+        portfolioObserver = new IntersectionObserver(entries => {
+          if (entries.some(entry => entry.isIntersecting)) {
+            revealPortfolioCards([...grid.querySelectorAll('.portfolio-card:not([hidden])')]);
+            portfolioObserver.disconnect();
+            portfolioObserver = null;
+          }
+        }, { threshold: 0.1 });
+        portfolioObserver.observe(grid);
+      } else if (!portfolioObserver) {
+        revealPortfolioCards(cards.filter(card => !card.hidden));
+      }
     }
+    window.addEventListener('resize', moveFilterIndicator);
+    window.addEventListener('load', moveFilterIndicator);
 
     // Función para cambiar idioma
     function setLanguage(lang) {
@@ -818,7 +788,6 @@
       // Menú
       document.querySelector('a[href="#hero"]').innerHTML = `<i class="bi bi-house navicon"></i>${translations[lang].home}`;
       document.querySelector('a[href="#about"]').innerHTML = `<i class="bi bi-person navicon"></i> ${translations[lang].about}`;
-      document.querySelector('a[href="#resume"]').innerHTML = `<i class="bi bi-file-earmark-text navicon"></i> ${translations[lang].resume}`;
       document.querySelector('a[href="#portfolio"]').innerHTML = `<i class="bi bi-images navicon"></i> ${translations[lang].portfolio}`;
       document.querySelector('a[href="#services"]').innerHTML = `<i class="bi bi-hdd-stack navicon"></i> ${translations[lang].services}`;
       document.querySelector('a[href="#contact"]').innerHTML = `<i class="bi bi-envelope navicon"></i> ${translations[lang].contact}`;
@@ -841,6 +810,8 @@
       }
       // Texto "Soy" o "I am"
       document.getElementById('hero-iam').textContent = lang === 'es' ? 'Soy' : 'I am';
+      document.getElementById('hero-cta-portfolio').textContent = lang === 'es' ? 'Ver portafolio' : 'View portfolio';
+      document.getElementById('hero-cta-contact').textContent = lang === 'es' ? 'Contáctame' : 'Contact me';
       // About
       document.querySelector('#about .section-title h2').textContent = translations[lang].aboutTitle;
       document.querySelector('#about .section-title p').textContent = translations[lang].aboutDesc;
@@ -863,155 +834,15 @@
       //   }
       // });
       // About párrafo final
-      document.querySelectorAll('#about .content p.py-3').forEach((el) => {
+      document.querySelectorAll('#about .content p.py-3:not(.fst-italic)').forEach((el) => {
         el.textContent = translations[lang].aboutText1;
       });
       // Stats
       document.getElementById('stats-experience').textContent = translations[lang].statsExperience;
-      document.getElementById('stats-experience-desc').textContent = translations[lang].statsExperienceDesc;
       document.getElementById('stats-projects').textContent = translations[lang].statsProjects;
-      document.getElementById('stats-projects-desc').textContent = translations[lang].statsProjectsDesc;
       // Skills
       document.querySelector('#skills .section-title h2').textContent = translations[lang].skillsTitle;
       document.querySelector('#skills .section-title p').textContent = translations[lang].skillsDesc;
-      // Resume
-      document.querySelector('#resume .section-title h2').textContent = translations[lang].resumeTitle;
-      document.querySelector('#resume .section-title p').textContent = translations[lang].resumeDesc;
-      document.getElementById('resume-summary-title').textContent = translations[lang].resumeSumary;
-      document.getElementById('resume-summary-desc').textContent = translations[lang].resumeSumaryDesc;
-      document.getElementById('resume-education-title').textContent = translations[lang].resumeEducation;
-      document.getElementById('resume-edu1-degree').textContent = translations[lang].resumeEdu1Degree;
-      document.getElementById('resume-edu1').textContent = translations[lang].resumeEdu1;
-      document.getElementById('resume-edu2-degree').textContent = translations[lang].resumeEdu2Degree;
-      document.getElementById('resume-edu2').textContent = translations[lang].resumeEdu2;
-      document.getElementById('resume-edu3-degree').textContent = translations[lang].resumeEdu3Degree;
-      document.getElementById('resume-edu3').textContent = translations[lang].resumeEdu3;
-      document.getElementById('resume-experience-title').textContent = translations[lang].resumeExperience;
-      // Experiencia profesional
-      const experience = {
-        es: [
-          {
-            company: 'Universidad Católica Luis Amigó',
-            role: 'Docente',
-            date: 'julio de 2025 - Presente',
-            location: 'Medellín, Antioquia, Colombia',
-            desc: 'Enseñanza de programación y desarrollo de software, focalizado en Desarrollo Móvil.'
-          },
-          {
-            company: 'DaniDev',
-            role: 'Consultor y Desarrollador Freelance',
-            date: 'enero de 2017 - Presente',
-            location: 'Colombia',
-            desc: 'Ingeniero de software freelance con experiencia en el análisis, diseño, desarrollo y despliegue de sistemas de información a medida, enfocados en resolver necesidades específicas de cada cliente. Implemento metodologías ágiles como Scrum y Kanban para gestionar proyectos de manera eficiente, asegurando entregas puntuales y de alta calidad. Trabajo con tecnologías modernas y herramientas innovadoras para crear soluciones escalables, seguras y de alto rendimiento.'
-          },
-          {
-            company: 'Tecnológico de Antioquia - Institución Universitaria',
-            role: 'Ingeniero de software en Unidad Virtual y Docente facultad de Ingeniería',
-            date: 'febrero de 2021 - Presente',
-            location: 'Colombia',
-            desc: 'Apoyo a la unidad de virtualidad de la facultad de ingeniería, contribuyendo al desarrollo y mantenimiento de plataformas educativas virtuales. Creación y diseño de cursos en línea, desarrollando contenidos interactivos y de alta calidad para optimizar la experiencia de aprendizaje.'
-          },
-          {
-            company: 'Alkemy',
-            role: 'Java Tutor',
-            date: 'marzo de 2025 - julio de 2025',
-            location: 'Colombia',
-            desc: 'Acompañamiento en procesos formativos bajo el modelo de aula invertida, brindando retroalimentación continua y fomentando la profundización temática en áreas clave del desarrollo de software.'
-          },
-          {
-            company: 'COOMULSAP',
-            role: 'Profesor de programación de software',
-            date: 'febrero de 2024 - diciembre de 2024',
-            location: 'Medellín, Antioquia, Colombia',
-            desc: 'Responsable de la enseñanza de tecnología e informática a estudiantes de 8°, 9°, 10° y 11° grado. Coordinador y docente del programa de media técnica en desarrollo de Software, en convenio con el SENA y la Universidad La Sallista.'
-          },
-          {
-            company: 'Municipio de Sabaneta',
-            role: 'Docente Ingeniería de Software',
-            date: 'mayo de 2023 - enero de 2024',
-            location: 'Sabaneta, Antioquia, Colombia',
-            desc: 'Creación y diseño de los microcurrículos del programa técnico en desarrollo de software, asegurando la alineación con los estándares educativos y las necesidades del mercado laboral.'
-          },
-          {
-            company: 'Católica del Norte Fundación Universitaria',
-            role: 'Ingeniero Analista de Desarrollo web',
-            date: 'junio de 2021 - julio de 2023',
-            location: 'Santa Rosa de Osos, Antioquia, Colombia',
-            desc: 'Análisis de información para el desarrollo de aplicaciones web, asegurando la comprensión de los requisitos y necesidades de los usuarios. Desarrollo de aplicaciones web eficientes y escalables, utilizando las mejores prácticas de la industria y tecnologías modernas.'
-          },
-          {
-            company: 'Sánchez Computadores',
-            role: 'Analista de desarrollo de software',
-            date: 'junio de 2019 - agosto de 2021',
-            location: 'Sevilla, Valle del Cauca, Colombia',
-            desc: 'Recolectar y analizar información para definir requerimientos en proyectos de sistemas de información, asegurando una comprensión completa de las necesidades del cliente. Desarrollar aplicaciones completas desde la base de datos hasta la interfaz gráfica, utilizando metodologías efectivas de desarrollo y asegurando la calidad del código y la funcionalidad del producto.'
-          }
-        ],
-        en: [
-          {
-            company: 'Universidad Católica Luis Amigó',
-            role: 'Lecturer',
-            date: 'July 2025 - Present',
-            location: 'Medellín, Antioquia, Colombia',
-            desc: 'Teaching programming and software development, focused on Mobile Development.'
-          },
-          {
-            company: 'DaniDev',
-            role: 'Consultant and Freelance Software Developer',
-            date: 'January 2017 - Present',
-            location: 'Colombia',
-            desc: 'Freelance software engineer experienced in the analysis, design, development, and deployment of custom information systems tailored to meet specific client needs. I implement agile methodologies such as Scrum and Kanban to efficiently manage projects, ensuring timely and high-quality deliveries. I work with modern technologies and innovative tools to create scalable, secure, and high-performance solutions.'
-          },
-          {
-            company: 'Tecnológico de Antioquia - Institución Universitaria',
-            role: 'Software Engineer in Virtual Unit and Lecturer, Faculty of Engineering',
-            date: 'February 2021 - Present',
-            location: 'Colombia',
-            desc: 'Support for the virtual unit of the Faculty of Engineering, contributing to the development and maintenance of virtual educational platforms. Creation and design of online courses, developing interactive and high-quality content to optimize the learning experience.'
-          },
-          {
-            company: 'Alkemy',
-            role: 'Java Tutor',
-            date: 'March 2025 - July 2025',
-            location: 'Colombia',
-            desc: 'Support in training processes under the flipped classroom model, providing continuous feedback and encouraging in-depth learning in key areas of software development.'
-          },
-          {
-            company: 'COOMULSAP',
-            role: 'Software Programming Teacher',
-            date: 'February 2024 - December 2024',
-            location: 'Medellín, Antioquia, Colombia',
-            desc: 'Responsible for teaching technology and computer science to 8th to 11th grade students. Coordinator and teacher of the technical high school program in Software Development, in partnership with SENA and Universidad La Sallista.'
-          },
-          {
-            company: 'Municipio de Sabaneta',
-            role: 'Software Engineering Lecturer',
-            date: 'May 2023 - January 2024',
-            location: 'Sabaneta, Antioquia, Colombia',
-            desc: 'Creation and design of micro-curricula for the technical program in software development, ensuring alignment with educational standards and labor market needs.'
-          },
-          {
-            company: 'Católica del Norte Fundación Universitaria',
-            role: 'Web Development Analyst Engineer',
-            date: 'June 2021 - July 2023',
-            location: 'Santa Rosa de Osos, Antioquia, Colombia',
-            desc: 'Information analysis for web application development, ensuring understanding of user requirements and needs. Development of efficient and scalable web applications using industry best practices and modern technologies.'
-          },
-          {
-            company: 'Sánchez Computadores',
-            role: 'Software Development Analyst',
-            date: 'June 2019 - August 2021',
-            location: 'Sevilla, Valle del Cauca, Colombia',
-            desc: 'Collect and analyze information to define requirements in information systems projects, ensuring a complete understanding of client needs. Develop complete applications from the database to the user interface, using effective development methodologies and ensuring code quality and product functionality.'
-          }
-        ]
-      };
-      // Render experiencia profesional
-      const expList = document.getElementById('resume-experience-list');
-      expList.innerHTML = '';
-      experience[lang].forEach(exp => {
-        expList.innerHTML += `<div class="resume-item"><h4>${exp.role}</h4><h5>${exp.date}</h5><p><em>${exp.company}, ${exp.location}</em></p><p>${exp.desc}</p></div>`;
-      });
       // Contact
       document.querySelector('#contact .section-title h2').textContent = translations[lang].contactTitle;
       document.querySelector('#contact-desc').textContent = translations[lang].contactDesc;
@@ -1039,11 +870,13 @@
       servicesList.innerHTML = '';
       services.forEach((srv, idx) => {
         servicesList.innerHTML += `
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="${100 + idx * 100}">
-            <div class="icon flex-shrink-0"><i class="bi ${translations[lang][srv.key + 'Icon']}"></i></div>
-            <div>
-              <h4 class="title">${translations[lang][srv.key]}</h4>
-              <p class="description">${translations[lang][srv.key + 'Desc']}</p>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="${100 + idx * 100}">
+            <div class="service-item d-flex h-100">
+              <div class="icon flex-shrink-0"><i class="bi ${translations[lang][srv.key + 'Icon']}"></i></div>
+              <div>
+                <h4 class="title">${translations[lang][srv.key]}</h4>
+                <p class="description">${translations[lang][srv.key + 'Desc']}</p>
+              </div>
             </div>
           </div>
         `;
@@ -1051,11 +884,6 @@
       // Portfolio
       document.querySelector('#portfolio .section-title h2').textContent = translations[lang].portfolioTitle;
       document.querySelector('#portfolio-desc').textContent = translations[lang].portfolioDesc;
-      document.getElementById('portfolio-cat-all').textContent = translations[lang].portfolioAll;
-      document.getElementById('portfolio-cat-app-movil').textContent = translations[lang].portfolioAppMovil;
-      document.getElementById('portfolio-cat-app-web').textContent = translations[lang].portfolioAppWeb;
-      document.getElementById('portfolio-cat-websites').textContent = translations[lang].portfolioWebsites;
-      document.getElementById('portfolio-cat-backend').textContent = translations[lang].portfolioBackend;
       renderPortfolio(lang);
     }
     document.getElementById('btn-es').onclick = () => setLanguage('es');
