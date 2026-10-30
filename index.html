@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
@@ -65,6 +65,7 @@
         <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
         <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
         <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
+        <li><a href="#policies"><i class="bi bi-shield-check navicon"></i> Policies</a></li>
         <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
         <li class="nav-item-language">
           <button id="btn-es" class="btn-lang active">🇨🇴 ES</button>
@@ -240,6 +241,23 @@
 
     </section><!-- /Services Section -->
 
+    <!-- Policies Section -->
+    <section id="policies" class="policies section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 id="policies-title">Políticas de mis apps</h2>
+        <p id="policies-desc"></p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+        <div class="row gy-4 justify-content-center" id="policies-list">
+          <!-- Las políticas se renderizan dinámicamente por JS -->
+        </div>
+      </div>
+
+    </section><!-- /Policies Section -->
+
     <!-- Contact Section -->
     <section id="contact" class="contact section">
 
@@ -278,10 +296,162 @@
     <div class="container">
       <div class="copyright text-center ">
         <p>&copy; Copyright <span id="currentYear"></span>, <a class="white" href="https://github.com/DanielDev87">Daniel Agudelo with ❤</a> <br>All Rights Reserved</p>
+        <button type="button" class="footer-policy-link" data-bs-toggle="modal" data-bs-target="#privacyModal">
+          <i class="bi bi-shield-lock"></i> <span id="footer-privacy">Política de privacidad</span>
+        </button>
       </div>
     </div>
 
   </footer>
+
+  <!-- Privacy Policy Modal -->
+  <div class="modal fade policy-modal" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <div class="policy-header-icon"><i class="bi bi-shield-lock"></i></div>
+          <div>
+            <h2 class="modal-title" id="privacyModalTitle">
+              <span data-policy-lang="es">Política de Privacidad</span>
+              <span data-policy-lang="en">Privacy Policy</span>
+            </h2>
+            <p class="policy-updated">
+              <span data-policy-lang="es">Última actualización: 30 de octubre de 2026</span>
+              <span data-policy-lang="en">Last updated: October 30, 2026</span>
+            </p>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+
+        <div class="modal-body">
+
+          <!-- Español -->
+          <div data-policy-lang="es">
+            <p class="policy-intro">La presente Política de Privacidad describe cómo <strong>Daniel Agudelo (DanielDev87)</strong> (en adelante, "el Sitio Web") recopila, utiliza y protege la información personal de los visitantes y usuarios.</p>
+            <p class="policy-intro">Al navegar y utilizar este Sitio Web, aceptas los términos descritos en esta política.</p>
+
+            <section class="policy-section">
+              <h3><span class="policy-num">1</span> Información que recopilamos</h3>
+              <h4>A. Información facilitada voluntariamente</h4>
+              <p><strong>Formulario de contacto y correo electrónico:</strong> si decides ponerte en contacto a través de los formularios del sitio web o por correo directo, recopilaremos datos como tu nombre, dirección de correo electrónico y cualquier mensaje o información adicional que decidas proporcionar.</p>
+              <h4>B. Datos de navegación y análisis (cookies)</h4>
+              <p><strong>Datos técnicos y de uso:</strong> podemos recopilar información no identificable sobre tu visita, tal como dirección IP (anonimizada), tipo de navegador, idioma, páginas visitadas, tiempo de permanencia y páginas de referencia.</p>
+              <p><strong>Cookies:</strong> este sitio web puede utilizar cookies técnicas necesarias para su funcionamiento básico y cookies analíticas para entender el tráfico y mejorar la experiencia de navegación. Puedes configurar o desactivar las cookies en cualquier momento desde la configuración de tu navegador.</p>
+            </section>
+
+            <section class="policy-section">
+              <h3><span class="policy-num">2</span> Uso de la información</h3>
+              <p>La información recopilada en el Sitio Web se utiliza estrictamente para:</p>
+              <ul>
+                <li>Responder a tus mensajes, consultas, solicitudes de presupuestos o propuestas de trabajo.</li>
+                <li>Analizar el tráfico del sitio para optimizar el contenido, el rendimiento y la experiencia del usuario.</li>
+                <li>Mantener la seguridad e integridad del sitio web.</li>
+              </ul>
+            </section>
+
+            <section class="policy-section">
+              <h3><span class="policy-num">3</span> Retención y cesión de datos</h3>
+              <p><strong>No venta ni comercialización:</strong> no vendemos, alquilamos ni comercializamos tu información personal con terceros bajo ninguna circunstancia.</p>
+              <p><strong>Proveedores de servicios:</strong> podemos compartir datos de navegación no identificables con proveedores de servicios analíticos o de alojamiento web (por ejemplo, servicios de hosting o herramientas de analítica web) que cumplen con los estándares internacionales de protección de datos.</p>
+            </section>
+
+            <section class="policy-section">
+              <h3><span class="policy-num">4</span> Enlaces a sitios web de terceros</h3>
+              <p>Este Sitio Web puede incluir enlaces a sitios externos, tales como redes sociales (LinkedIn, GitHub, X), plataformas de proyectos o sitios de clientes. No nos hacemos responsables del contenido ni de las prácticas de privacidad de dichos sitios externos. Te recomendamos revisar la política de privacidad de cada sitio que visites.</p>
+            </section>
+
+            <section class="policy-section">
+              <h3><span class="policy-num">5</span> Tus derechos sobre tus datos</h3>
+              <p>Tienes derecho a:</p>
+              <ul>
+                <li>Solicitar acceso a la información personal que conservamos sobre ti.</li>
+                <li>Solicitar la corrección o eliminación de tus datos personales.</li>
+                <li>Retirar tu consentimiento para el tratamiento de tus datos en cualquier momento.</li>
+              </ul>
+              <p>Para ejercer cualquiera de estos derechos, envía una solicitud a la dirección de correo indicada en la sección de contacto.</p>
+            </section>
+
+            <section class="policy-section">
+              <h3><span class="policy-num">6</span> Contacto</h3>
+              <p>Si tienes alguna pregunta o inquietud sobre esta Política de Privacidad, puedes ponerte en contacto a través de:</p>
+              <ul class="policy-contact">
+                <li><i class="bi bi-person"></i> <strong>Nombre / Desarrollador:</strong> Daniel Felipe Agudelo Molina</li>
+                <li><i class="bi bi-envelope"></i> <strong>Correo electrónico:</strong> <a href="mailto:felipeagudelo2010@hotmail.com">felipeagudelo2010@hotmail.com</a></li>
+                <li><i class="bi bi-globe2"></i> <strong>Sitio web:</strong> <a class="policy-site-url" href="#"></a></li>
+              </ul>
+            </section>
+          </div>
+
+          <!-- English -->
+          <div data-policy-lang="en">
+            <p class="policy-intro">This Privacy Policy describes how <strong>Daniel Agudelo (DanielDev87)</strong> (hereinafter, "the Website") collects, uses and protects the personal information of its visitors and users.</p>
+            <p class="policy-intro">By browsing and using this Website, you accept the terms described in this policy.</p>
+
+            <section class="policy-section">
+              <h3><span class="policy-num">1</span> Information we collect</h3>
+              <h4>A. Information provided voluntarily</h4>
+              <p><strong>Contact form and email:</strong> if you decide to get in touch through the website's forms or by direct email, we will collect data such as your name, email address and any message or additional information you choose to provide.</p>
+              <h4>B. Browsing and analytics data (cookies)</h4>
+              <p><strong>Technical and usage data:</strong> we may collect non-identifiable information about your visit, such as (anonymized) IP address, browser type, language, pages visited, time spent and referring pages.</p>
+              <p><strong>Cookies:</strong> this website may use technical cookies required for its basic operation and analytics cookies to understand traffic and improve the browsing experience. You can configure or disable cookies at any time from your browser settings.</p>
+            </section>
+
+            <section class="policy-section">
+              <h3><span class="policy-num">2</span> Use of information</h3>
+              <p>The information collected on the Website is used strictly to:</p>
+              <ul>
+                <li>Reply to your messages, inquiries, quote requests or job proposals.</li>
+                <li>Analyze site traffic to optimize content, performance and user experience.</li>
+                <li>Maintain the security and integrity of the website.</li>
+              </ul>
+            </section>
+
+            <section class="policy-section">
+              <h3><span class="policy-num">3</span> Data retention and disclosure</h3>
+              <p><strong>No sale or commercialization:</strong> we do not sell, rent or trade your personal information with third parties under any circumstances.</p>
+              <p><strong>Service providers:</strong> we may share non-identifiable browsing data with analytics or web hosting providers (for example, hosting services or web analytics tools) that comply with international data protection standards.</p>
+            </section>
+
+            <section class="policy-section">
+              <h3><span class="policy-num">4</span> Links to third-party websites</h3>
+              <p>This Website may include links to external sites, such as social networks (LinkedIn, GitHub, X), project platforms or client websites. We are not responsible for the content or privacy practices of those external sites. We recommend reviewing the privacy policy of every site you visit.</p>
+            </section>
+
+            <section class="policy-section">
+              <h3><span class="policy-num">5</span> Your rights over your data</h3>
+              <p>You have the right to:</p>
+              <ul>
+                <li>Request access to the personal information we hold about you.</li>
+                <li>Request the correction or deletion of your personal data.</li>
+                <li>Withdraw your consent to the processing of your data at any time.</li>
+              </ul>
+              <p>To exercise any of these rights, send a request to the email address listed in the contact section.</p>
+            </section>
+
+            <section class="policy-section">
+              <h3><span class="policy-num">6</span> Contact</h3>
+              <p>If you have any questions or concerns about this Privacy Policy, you can get in touch through:</p>
+              <ul class="policy-contact">
+                <li><i class="bi bi-person"></i> <strong>Name / Developer:</strong> Daniel Felipe Agudelo Molina</li>
+                <li><i class="bi bi-envelope"></i> <strong>Email:</strong> <a href="mailto:felipeagudelo2010@hotmail.com">felipeagudelo2010@hotmail.com</a></li>
+                <li><i class="bi bi-globe2"></i> <strong>Website:</strong> <a class="policy-site-url" href="#"></a></li>
+              </ul>
+            </section>
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="policy-btn" data-bs-dismiss="modal">
+            <span data-policy-lang="es">Entendido</span>
+            <span data-policy-lang="en">Got it</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div><!-- End Privacy Policy Modal -->
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -625,6 +795,35 @@
       }
     ];
 
+    // Políticas de privacidad de mis apps (cada una tiene su página en /politicas)
+    const appPolicies = [
+      {
+        name: { es: 'Juego de Dados', en: 'Dice Game' },
+        platform: { es: 'App móvil · Android', en: 'Mobile app · Android' },
+        icon: 'bi-dice-5',
+        url: 'politicas/juego-de-dados.html'
+      }
+    ];
+
+    function renderPolicies(lang) {
+      document.getElementById('policies-title').textContent = lang === 'es' ? 'Políticas de mis apps' : 'My apps policies';
+      document.getElementById('policies-desc').textContent = lang === 'es'
+        ? 'Consulta las políticas de privacidad de las aplicaciones que he desarrollado y publicado.'
+        : 'Review the privacy policies of the applications I have developed and published.';
+      document.getElementById('policies-list').innerHTML = appPolicies.map((app, idx) => `
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="${100 + (idx % 3) * 100}">
+          <a href="${app.url}?lang=${lang}" class="policy-app-card h-100">
+            <span class="app-icon"><i class="bi ${app.icon}"></i></span>
+            <span>
+              <h4>${app.name[lang]}</h4>
+              <p>${app.platform[lang]} · ${lang === 'es' ? 'Política de privacidad' : 'Privacy policy'}</p>
+            </span>
+            <i class="bi bi-arrow-up-right arrow"></i>
+          </a>
+        </div>
+      `).join('');
+    }
+
     function renderServices(lang) {
       document.getElementById('services-list').innerHTML = servicesData.map((srv, idx) => `
         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="${100 + (idx % 3) * 100}">
@@ -848,6 +1047,8 @@
 
     // Función para cambiar idioma
     function setLanguage(lang) {
+      document.documentElement.lang = lang;
+      document.getElementById('footer-privacy').textContent = lang === 'es' ? 'Política de privacidad' : 'Privacy policy';
       document.getElementById('btn-es').classList.toggle('active', lang === 'es');
       document.getElementById('btn-en').classList.toggle('active', lang === 'en');
       // Menú
@@ -855,6 +1056,7 @@
       document.querySelector('a[href="#about"]').innerHTML = `<i class="bi bi-person navicon"></i> ${translations[lang].about}`;
       document.querySelector('a[href="#portfolio"]').innerHTML = `<i class="bi bi-images navicon"></i> ${translations[lang].portfolio}`;
       document.querySelector('a[href="#services"]').innerHTML = `<i class="bi bi-hdd-stack navicon"></i> ${translations[lang].services}`;
+      document.querySelector('a[href="#policies"]').innerHTML = `<i class="bi bi-shield-check navicon"></i> ${lang === 'es' ? 'Políticas' : 'Policies'}`;
       document.querySelector('a[href="#contact"]').innerHTML = `<i class="bi bi-envelope navicon"></i> ${translations[lang].contact}`;
       // Hero
       document.querySelector('#hero .container h2').textContent = translations[lang].heroTitle;
@@ -923,6 +1125,7 @@
       document.querySelector('#services .section-title h2').textContent = translations[lang].servicesTitle;
       document.querySelector('#services-intro').textContent = translations[lang].servicesIntro;
       renderServices(lang);
+      renderPolicies(lang);
       // Portfolio
       document.querySelector('#portfolio .section-title h2').textContent = translations[lang].portfolioTitle;
       document.querySelector('#portfolio-desc').textContent = translations[lang].portfolioDesc;
@@ -938,6 +1141,12 @@
     setLanguage('es');
 
     document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // La política muestra la URL real del sitio donde está publicado
+    document.querySelectorAll('.policy-site-url').forEach(link => {
+      link.href = location.origin;
+      link.textContent = location.origin;
+    });
   </script>
 
   <script>

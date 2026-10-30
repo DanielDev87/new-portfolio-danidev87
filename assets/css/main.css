@@ -204,21 +204,24 @@ h6 {
 }
 
 .header .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
   margin: 0 0 20px 0;
 }
 
 .header .social-links a {
-  font-size: 16px;
+  font-size: 15px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   background: color-mix(in srgb, var(--default-color), transparent 90%);
   color: var(--default-color);
-  margin: 0 2px;
   border-radius: 50%;
   text-align: center;
-  width: 40px;
-  height: 40px;
+  width: 34px;
+  height: 34px;
   transition: 0.3s;
 }
 
@@ -1601,6 +1604,434 @@ section,
   font-size: 14px;
   margin-bottom: 0;
   color: color-mix(in srgb, var(--default-color), transparent 25%);
+}
+
+/*--------------------------------------------------------------
+# Privacy Policy Modal
+--------------------------------------------------------------*/
+/* Muestra solo el bloque del idioma activo */
+html:not([lang="en"]) [data-policy-lang="en"],
+html[lang="en"] [data-policy-lang="es"] {
+  display: none;
+}
+
+.footer .footer-policy-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  padding: 6px 14px;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  border-radius: 50px;
+  background: transparent;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.footer .footer-policy-link:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.policy-modal .modal-content {
+  border: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px -20px rgba(5, 13, 24, 0.5);
+}
+
+.policy-modal .modal-header {
+  gap: 16px;
+  align-items: center;
+  padding: 24px 28px;
+  color: #ffffff;
+  border-bottom: 0;
+  background: linear-gradient(135deg, #050c1c, #0b1d3a 60%, #1b1f4b);
+}
+
+.policy-modal .policy-header-icon {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  font-size: 24px;
+  background: var(--accent-gradient);
+  box-shadow: 0 8px 24px -8px rgba(20, 157, 221, 0.8);
+}
+
+.policy-modal .modal-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.policy-modal .policy-updated {
+  margin: 2px 0 0 0;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.policy-modal .btn-close {
+  margin-left: auto;
+  align-self: flex-start;
+  filter: invert(1) grayscale(1) brightness(2);
+  opacity: 0.7;
+}
+
+.policy-modal .btn-close:hover {
+  opacity: 1;
+}
+
+.policy-modal .modal-body {
+  padding: 28px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: color-mix(in srgb, var(--default-color), transparent 15%);
+}
+
+:is(.policy-modal, .policy-page) .policy-intro {
+  margin-bottom: 10px;
+}
+
+:is(.policy-modal, .policy-page) .policy-section {
+  margin-top: 24px;
+  padding: 0;
+  background: none;
+  overflow: visible;
+}
+
+:is(.policy-modal, .policy-page) .policy-section h3 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+:is(.policy-modal, .policy-page) .policy-num {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 14px;
+  color: var(--accent-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 88%);
+}
+
+:is(.policy-modal, .policy-page) .policy-section h4 {
+  margin: 16px 0 6px 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+:is(.policy-modal, .policy-page) .policy-section ul {
+  padding-left: 20px;
+}
+
+:is(.policy-modal, .policy-page) .policy-section ul li::marker {
+  color: var(--accent-color);
+}
+
+:is(.policy-modal, .policy-page) .policy-contact {
+  list-style: none;
+  padding: 16px 18px !important;
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--accent-color), transparent 94%);
+}
+
+:is(.policy-modal, .policy-page) .policy-contact li {
+  padding: 4px 0;
+  word-break: break-word;
+}
+
+:is(.policy-modal, .policy-page) .policy-contact i {
+  color: var(--accent-color);
+  margin-right: 6px;
+}
+
+.policy-modal .modal-footer {
+  padding: 16px 28px;
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.policy-modal .policy-btn {
+  padding: 10px 28px;
+  border: 0;
+  border-radius: 50px;
+  font-family: var(--nav-font);
+  font-weight: 500;
+  color: var(--contrast-color);
+  background: var(--accent-gradient);
+  transition: transform 0.3s var(--ease-out), box-shadow 0.3s;
+}
+
+.policy-modal .policy-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -8px var(--accent-color);
+}
+
+@media (max-width: 575px) {
+  .policy-modal .modal-header,
+  .policy-modal .modal-body {
+    padding: 20px;
+  }
+}
+
+/*--------------------------------------------------------------
+# App Policy Pages (politicas/*.html)
+--------------------------------------------------------------*/
+.policy-page {
+  min-height: 100vh;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.policy-page .policy-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 14px 0;
+  background: rgba(5, 12, 28, 0.92);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.policy-page .policy-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--nav-font);
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.policy-page .policy-back:hover {
+  color: #ffffff;
+}
+
+.policy-page .policy-back i {
+  transition: transform 0.3s var(--ease-out);
+}
+
+.policy-page .policy-back:hover i {
+  transform: translateX(-4px);
+}
+
+.policy-page .policy-lang-switch {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.policy-page .policy-lang-switch button {
+  border: 0;
+  padding: 4px 14px;
+  border-radius: 50px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: var(--nav-font);
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.policy-page .policy-lang-switch button.active {
+  color: #ffffff;
+  background: var(--accent-gradient);
+}
+
+.policy-page .policy-main {
+  max-width: 860px;
+  padding-top: 50px;
+  padding-bottom: 60px;
+}
+
+.policy-page .policy-hero {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.policy-page .policy-app-icon {
+  width: 84px;
+  height: 84px;
+  margin: 0 auto 18px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+  font-size: 42px;
+  color: #ffffff;
+  background: var(--accent-gradient);
+  box-shadow: 0 16px 40px -14px var(--accent-color);
+  animation: policy-dice 3s var(--ease-out) infinite;
+}
+
+@keyframes policy-dice {
+  0%, 70%, 100% {
+    transform: rotate(0);
+  }
+
+  80% {
+    transform: rotate(-14deg) scale(1.05);
+  }
+
+  90% {
+    transform: rotate(10deg);
+  }
+}
+
+.policy-page .policy-kicker {
+  margin-bottom: 6px;
+  font-family: var(--nav-font);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent-color);
+}
+
+.policy-page .policy-hero h1 {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.policy-page .policy-app-name {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.policy-page .policy-updated {
+  font-size: 14px;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
+.policy-page .policy-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.policy-page .policy-highlights > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--heading-color);
+  background: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  box-shadow: var(--shadow-sm);
+}
+
+.policy-page .policy-highlights i {
+  color: var(--accent-color);
+}
+
+.policy-page .policy-card {
+  padding: 36px;
+  border-radius: 20px;
+  background: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
+  box-shadow: var(--shadow-sm);
+  color: color-mix(in srgb, var(--default-color), transparent 15%);
+}
+
+.policy-page .policy-footer {
+  padding: 24px 0 36px 0;
+  text-align: center;
+  font-size: 13px;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
+@media (max-width: 575px) {
+  .policy-page .policy-card {
+    padding: 22px;
+  }
+
+  .policy-page .policy-hero h1 {
+    font-size: 26px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Policies Section (index)
+--------------------------------------------------------------*/
+.policies .policy-app-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 22px;
+  border-radius: var(--radius);
+  background: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
+  box-shadow: var(--shadow-sm);
+  color: var(--default-color);
+  transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out), border-color 0.4s;
+}
+
+.policies .policy-app-card:hover {
+  color: var(--default-color);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: color-mix(in srgb, var(--accent-color), transparent 60%);
+}
+
+.policies .policy-app-card .app-icon {
+  flex-shrink: 0;
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 28px;
+  color: #ffffff;
+  background: var(--accent-gradient);
+  transition: transform 0.4s var(--ease-out);
+}
+
+.policies .policy-app-card:hover .app-icon {
+  transform: rotate(-10deg) scale(1.05);
+}
+
+.policies .policy-app-card h4 {
+  margin: 0 0 4px 0;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.policies .policy-app-card p {
+  margin: 0;
+  font-size: 13px;
+  color: color-mix(in srgb, var(--default-color), transparent 35%);
+}
+
+.policies .policy-app-card .arrow {
+  margin-left: auto;
+  font-size: 20px;
+  color: var(--accent-color);
+  transition: transform 0.3s var(--ease-out);
+}
+
+.policies .policy-app-card:hover .arrow {
+  transform: translate(3px, -3px);
 }
 
 /*--------------------------------------------------------------
